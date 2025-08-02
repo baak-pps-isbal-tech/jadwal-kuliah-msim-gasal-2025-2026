@@ -161,6 +161,13 @@
         border-bottom: 2px solid #e2e8f0;
     }
 
+    thead th:first-child {
+        border-top-left-radius: 12px;
+    }
+    thead th:last-child {
+        border-top-right-radius: 12px;
+    }
+
     th {
         font-weight: 600;
         padding: 14px 16px;
@@ -178,11 +185,16 @@
     }
 
     tr:hover td {
-        background-color: #f1f5f9;
+        background-color: #e0f2fe;
+        transform: scale(1.005);
+        transition: all 0.2s ease;
     }
 
     tr:nth-child(even) td {
-        background-color: #f9fafb;
+        background-color: #f8fafc;
+    }
+    tr:nth-child(odd) td {
+        background-color: #ffffff;
     }
 
     table th, table td {
@@ -830,5 +842,6 @@
 
 </body>
 </html>
+
 
 
