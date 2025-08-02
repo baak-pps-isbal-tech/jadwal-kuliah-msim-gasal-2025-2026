@@ -381,6 +381,10 @@
 </style>
 </head>
 <body>
+    <div style="text-align: right; padding: 12px 20px;">
+        <button onclick="showAdminLogin()" class="btn-zoom" style="background-color: #334155;">Admin</button>
+    </div>
+
     <div id="adminLogin" style="text-align:center; padding: 16px;">
         <input type="password" id="adminPass" placeholder="Masukkan Password Admin" style="padding: 8px; font-size: 1rem;">
         <button onclick="checkPassword()" class="btn-zoom" style="margin-left: 8px;">Login</button>
@@ -842,6 +846,10 @@
         buttonElement.classList.add('active');
     }
 
+    function showAdminLogin() {
+        document.getElementById("adminLogin").style.display = "block";
+    }
+    
     function checkPassword() {
         const inputPass = document.getElementById("adminPass").value;
         if (inputPass === "123456") {
@@ -867,7 +875,7 @@
         if (row) {
             for (let cell of row.cells) {
                 cell.contentEditable = "true";
-                cell.style.backgroundColor = "#fef3c7"; // warna edit
+                cell.style.backgroundColor = "#fef9c3"; // warna edit
             }
         }
     }
@@ -890,6 +898,7 @@
 
 </body>
 </html>
+
 
 
 
