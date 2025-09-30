@@ -489,6 +489,27 @@
         margin-right: 6px;
     }
 
+    /* Tambahkan CSS untuk foto dosen */
+    .lecturer-info-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    .lecturer-photo {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #e2e8f0;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+
+    .lecturer-details {
+        flex-grow: 1;
+    }
+
     /* Warna gradasi untuk setiap kartu */
     .schedule-card.blue {
         border-left: 5px solid #3b82f6;
@@ -653,6 +674,11 @@
             width: 100%;
             justify-content: center;
         }
+        
+        .lecturer-photo {
+            width: 60px;
+            height: 60px;
+        }
     }
 </style>
 </head>
@@ -743,17 +769,22 @@
                 <div class="card-title">Manajemen Sistem Informasi</div>
                 <div class="card-code">[MSIM101]</div>
                 <div class="card-info">
-                    <div class="card-info-item">
-                        <div class="icon">👨‍🏫</div>
-                        <div class="text">Krisna Adiyarta M., M.Sc., Ph.D.</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📚</div>
-                        <div class="text">3 SKS</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📍</div>
-                        <div class="card-room">Online</div>
+                    <div class="lecturer-info-container">
+                        <img src="krisna.png" alt="Foto Dosen" class="lecturer-photo">
+                        <div class="lecturer-details">
+                            <div class="card-info-item">
+                                <div class="icon">👨‍🏫</div>
+                                <div class="text">Krisna Adiyarta M., M.Sc., Ph.D.</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📚</div>
+                                <div class="text">3 SKS</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📍</div>
+                                <div class="card-room">Online</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -779,17 +810,22 @@
                 <div class="card-title">Manajemen Pelayanan Teknologi Informasi</div>
                 <div class="card-code">[MSIM104]</div>
                 <div class="card-info">
-                    <div class="card-info-item">
-                        <div class="icon">👨‍🏫</div>
-                        <div class="text">Dr. Ir. Goenawan Brotosaputro, S.Kom., M.Sc.</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📚</div>
-                        <div class="text">3 SKS</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📍</div>
-                        <div class="card-room">2.1.3</div>
+                    <div class="lecturer-info-container">
+                        <img src="goenawan.png" alt="Foto Dosen" class="lecturer-photo">
+                        <div class="lecturer-details">
+                            <div class="card-info-item">
+                                <div class="icon">👨‍🏫</div>
+                                <div class="text">Dr. Ir. Goenawan Brotosaputro, S.Kom., M.Sc.</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📚</div>
+                                <div class="text">3 SKS</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📍</div>
+                                <div class="card-room">2.1.3</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -815,17 +851,22 @@
                 <div class="card-title">Pengembangan Strategi Bisnis</div>
                 <div class="card-code">[MSIM103]</div>
                 <div class="card-info">
-                    <div class="card-info-item">
-                        <div class="icon">👨‍🏫</div>
-                        <div class="text">Erwin, S.E., M.M., Ph.D.</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📚</div>
-                        <div class="text">3 SKS</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📍</div>
-                        <div class="card-room">Pasca 1</div>
+                    <div class="lecturer-info-container">
+                        <img src="erwin.png" alt="Foto Dosen" class="lecturer-photo">
+                        <div class="lecturer-details">
+                            <div class="card-info-item">
+                                <div class="icon">👨‍🏫</div>
+                                <div class="text">Erwin, S.E., M.M., Ph.D.</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📚</div>
+                                <div class="text">3 SKS</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📍</div>
+                                <div class="card-room">Pasca 1</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -851,17 +892,22 @@
                 <div class="card-title">Bisnis Intelejen dan Analisa</div>
                 <div class="card-code">[MSIM105]</div>
                 <div class="card-info">
-                    <div class="card-info-item">
-                        <div class="icon">👨‍🏫</div>
-                        <div class="text">Dr. Amri, S.E., M.M.</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📚</div>
-                        <div class="text">3 SKS</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📍</div>
-                        <div class="card-room">Pasca 1</div>
+                    <div class="lecturer-info-container">
+                        <img src="amri.png" alt="Foto Dosen" class="lecturer-photo">
+                        <div class="lecturer-details">
+                            <div class="card-info-item">
+                                <div class="icon">👨‍🏫</div>
+                                <div class="text">Dr. Amri, S.E., M.M.</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📚</div>
+                                <div class="text">3 SKS</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📍</div>
+                                <div class="card-room">Pasca 1</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -887,17 +933,22 @@
                 <div class="card-title">Manajemen Keuangan</div>
                 <div class="card-code">[MSIM102]</div>
                 <div class="card-info">
-                    <div class="card-info-item">
-                        <div class="icon">👨‍🏫</div>
-                        <div class="text">Dr. Yulianti, S.E., M.M.</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📚</div>
-                        <div class="text">3 SKS</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📍</div>
-                        <div class="card-room">Pasca 1</div>
+                    <div class="lecturer-info-container">
+                        <img src="yulianti.png" alt="Foto Dosen" class="lecturer-photo">
+                        <div class="lecturer-details">
+                            <div class="card-info-item">
+                                <div class="icon">👨‍🏫</div>
+                                <div class="text">Dr. Yulianti, S.E., M.M.</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📚</div>
+                                <div class="text">3 SKS</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📍</div>
+                                <div class="card-room">Pasca 1</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -928,17 +979,22 @@
                 <div class="card-title">Pengembangan Strategi Bisnis</div>
                 <div class="card-code">[MSIM103]</div>
                 <div class="card-info">
-                    <div class="card-info-item">
-                        <div class="icon">👨‍🏫</div>
-                        <div class="text">Erwin, S.E., M.M., Ph.D.</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📚</div>
-                        <div class="text">3 SKS</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📍</div>
-                        <div class="card-room">Pasca 1</div>
+                    <div class="lecturer-info-container">
+                        <img src="erwin.png" alt="Foto Dosen" class="lecturer-photo">
+                        <div class="lecturer-details">
+                            <div class="card-info-item">
+                                <div class="icon">👨‍🏫</div>
+                                <div class="text">Erwin, S.E., M.M., Ph.D.</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📚</div>
+                                <div class="text">3 SKS</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📍</div>
+                                <div class="card-room">Pasca 1</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -964,17 +1020,22 @@
                 <div class="card-title">Manajemen Pelayanan Teknologi Informasi</div>
                 <div class="card-code">[MSIM104]</div>
                 <div class="card-info">
-                    <div class="card-info-item">
-                        <div class="icon">👨‍🏫</div>
-                        <div class="text">Dr. Ir. Kiswanto, S.T., M.Kom., IPM, APEC Eng.</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📚</div>
-                        <div class="text">3 SKS</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📍</div>
-                        <div class="card-room">Pasca 1</div>
+                    <div class="lecturer-info-container">
+                        <img src="kiswanto.png" alt="Foto Dosen" class="lecturer-photo">
+                        <div class="lecturer-details">
+                            <div class="card-info-item">
+                                <div class="icon">👨‍🏫</div>
+                                <div class="text">Dr. Ir. Kiswanto, S.T., M.Kom., IPM, APEC Eng.</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📚</div>
+                                <div class="text">3 SKS</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📍</div>
+                                <div class="card-room">Pasca 1</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -1000,17 +1061,22 @@
                 <div class="card-title">Manajemen Sistem Informasi</div>
                 <div class="card-code">[MSIM101]</div>
                 <div class="card-info">
-                    <div class="card-info-item">
-                        <div class="icon">👨‍🏫</div>
-                        <div class="text">Hidayat Febiansyah, S.Kom., M.Sc., Ph.D.</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📚</div>
-                        <div class="text">3 SKS</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📍</div>
-                        <div class="card-room">2.1.3</div>
+                    <div class="lecturer-info-container">
+                        <img src="hidayat.png" alt="Foto Dosen" class="lecturer-photo">
+                        <div class="lecturer-details">
+                            <div class="card-info-item">
+                                <div class="icon">👨‍🏫</div>
+                                <div class="text">Hidayat Febiansyah, S.Kom., M.Sc., Ph.D.</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📚</div>
+                                <div class="text">3 SKS</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📍</div>
+                                <div class="card-room">2.1.3</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -1036,17 +1102,22 @@
                 <div class="card-title">Manajemen Keuangan</div>
                 <div class="card-code">[MSIM102]</div>
                 <div class="card-info">
-                    <div class="card-info-item">
-                        <div class="icon">👨‍🏫</div>
-                        <div class="text">Dr. Yulianti, S.E., M.M.</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📚</div>
-                        <div class="text">3 SKS</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📍</div>
-                        <div class="card-room">2.1.4</div>
+                    <div class="lecturer-info-container">
+                        <img src="yulianti.png" alt="Foto Dosen" class="lecturer-photo">
+                        <div class="lecturer-details">
+                            <div class="card-info-item">
+                                <div class="icon">👨‍🏫</div>
+                                <div class="text">Dr. Yulianti, S.E., M.M.</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📚</div>
+                                <div class="text">3 SKS</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📍</div>
+                                <div class="card-room">2.1.4</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -1072,17 +1143,22 @@
                 <div class="card-title">Bisnis Intelejen dan Analisa</div>
                 <div class="card-code">[MSIM105]</div>
                 <div class="card-info">
-                    <div class="card-info-item">
-                        <div class="icon">👨‍🏫</div>
-                        <div class="text">Dr. Amri, S.E., M.M.</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📚</div>
-                        <div class="text">3 SKS</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📍</div>
-                        <div class="card-room">2.1.4</div>
+                    <div class="lecturer-info-container">
+                        <img src="amri.png" alt="Foto Dosen" class="lecturer-photo">
+                        <div class="lecturer-details">
+                            <div class="card-info-item">
+                                <div class="icon">👨‍🏫</div>
+                                <div class="text">Dr. Amri, S.E., M.M.</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📚</div>
+                                <div class="text">3 SKS</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📍</div>
+                                <div class="card-room">2.1.4</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -1113,17 +1189,22 @@
                 <div class="card-title">IT Governance</div>
                 <div class="card-code">[MSIM303]</div>
                 <div class="card-info">
-                    <div class="card-info-item">
-                        <div class="icon">👨‍🏫</div>
-                        <div class="text">Dr. Ir. Goenawan Brotosaputro, S.Kom., M.Sc.</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📚</div>
-                        <div class="text">3 SKS</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📍</div>
-                        <div class="card-room">2.1.3</div>
+                    <div class="lecturer-info-container">
+                        <img src="goenawan.png" alt="Foto Dosen" class="lecturer-photo">
+                        <div class="lecturer-details">
+                            <div class="card-info-item">
+                                <div class="icon">👨‍🏫</div>
+                                <div class="text">Dr. Ir. Goenawan Brotosaputro, S.Kom., M.Sc.</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📚</div>
+                                <div class="text">3 SKS</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📍</div>
+                                <div class="card-room">2.1.3</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -1149,17 +1230,22 @@
                 <div class="card-title">Penjaminan Kualitas dan Manajemen</div>
                 <div class="card-code">[MSIM304]</div>
                 <div class="card-info">
-                    <div class="card-info-item">
-                        <div class="icon">👨‍🏫</div>
-                        <div class="text">Erwin, S.E., M.M., Ph.D.</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📚</div>
-                        <div class="text">3 SKS</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📍</div>
-                        <div class="card-room">2.1.4</div>
+                    <div class="lecturer-info-container">
+                        <img src="erwin.png" alt="Foto Dosen" class="lecturer-photo">
+                        <div class="lecturer-details">
+                            <div class="card-info-item">
+                                <div class="icon">👨‍🏫</div>
+                                <div class="text">Erwin, S.E., M.M., Ph.D.</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📚</div>
+                                <div class="text">3 SKS</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📍</div>
+                                <div class="card-room">2.1.4</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -1190,17 +1276,22 @@
                 <div class="card-title">Analisis Data Pendidikan</div>
                 <div class="card-code">[MSIM308]</div>
                 <div class="card-info">
-                    <div class="card-info-item">
-                        <div class="icon">👨‍🏫</div>
-                        <div class="text">Dr. Yulianti, S.E., M.M.</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📚</div>
-                        <div class="text">3 SKS</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📍</div>
-                        <div class="card-room">2.1.4</div>
+                    <div class="lecturer-info-container">
+                        <img src="yulianti.png" alt="Foto Dosen" class="lecturer-photo">
+                        <div class="lecturer-details">
+                            <div class="card-info-item">
+                                <div class="icon">👨‍🏫</div>
+                                <div class="text">Dr. Yulianti, S.E., M.M.</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📚</div>
+                                <div class="text">3 SKS</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📍</div>
+                                <div class="card-room">2.1.4</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -1226,17 +1317,22 @@
                 <div class="card-title">E-Learning dan Teknologi Pendidikan</div>
                 <div class="card-code">[MSIM307]</div>
                 <div class="card-info">
-                    <div class="card-info-item">
-                        <div class="icon">👨‍🏫</div>
-                        <div class="text">Dr. Ir. Kiswanto, S.T., M.Kom., IPM, APEC Eng.</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📚</div>
-                        <div class="text">3 SKS</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📍</div>
-                        <div class="card-room">2.1.5</div>
+                    <div class="lecturer-info-container">
+                        <img src="kiswanto.png" alt="Foto Dosen" class="lecturer-photo">
+                        <div class="lecturer-details">
+                            <div class="card-info-item">
+                                <div class="icon">👨‍🏫</div>
+                                <div class="text">Dr. Ir. Kiswanto, S.T., M.Kom., IPM, APEC Eng.</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📚</div>
+                                <div class="text">3 SKS</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📍</div>
+                                <div class="card-room">2.1.5</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -1267,17 +1363,22 @@
                 <div class="card-title">Implementasi dan Integrasi Sistem</div>
                 <div class="card-code">[MSIM306]</div>
                 <div class="card-info">
-                    <div class="card-info-item">
-                        <div class="icon">👨‍🏫</div>
-                        <div class="text">Krisna Adiyarta M., S.Kom., M.Sc., Ph.D.</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📚</div>
-                        <div class="text">3 SKS</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📍</div>
-                        <div class="card-room">2.1.5</div>
+                    <div class="lecturer-info-container">
+                        <img src="krisna.png" alt="Foto Dosen" class="lecturer-photo">
+                        <div class="lecturer-details">
+                            <div class="card-info-item">
+                                <div class="icon">👨‍🏫</div>
+                                <div class="text">Krisna Adiyarta M., S.Kom., M.Sc., Ph.D.</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📚</div>
+                                <div class="text">3 SKS</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📍</div>
+                                <div class="card-room">2.1.5</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -1303,17 +1404,22 @@
                 <div class="card-title">E-Governance dan Komunikasi Publik</div>
                 <div class="card-code">[MSIM305]</div>
                 <div class="card-info">
-                    <div class="card-info-item">
-                        <div class="icon">👨‍🏫</div>
-                        <div class="text">Erwin, S.E., M.M., Ph.D.</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📚</div>
-                        <div class="text">3 SKS</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📍</div>
-                        <div class="card-room">2.1.3</div>
+                    <div class="lecturer-info-container">
+                        <img src="erwin.png" alt="Foto Dosen" class="lecturer-photo">
+                        <div class="lecturer-details">
+                            <div class="card-info-item">
+                                <div class="icon">👨‍🏫</div>
+                                <div class="text">Erwin, S.E., M.M., Ph.D.</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📚</div>
+                                <div class="text">3 SKS</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📍</div>
+                                <div class="card-room">2.1.3</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -1344,17 +1450,22 @@
                 <div class="card-title">Manajemen Sistem Informasi Global</div>
                 <div class="card-code">[MSIM302]</div>
                 <div class="card-info">
-                    <div class="card-info-item">
-                        <div class="icon">👨‍🏫</div>
-                        <div class="text">Prof. Ir. Wendi Usino, M.M., M.Sc., Ph.D.</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📚</div>
-                        <div class="text">3 SKS</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📍</div>
-                        <div class="card-room">2.1.4</div>
+                    <div class="lecturer-info-container">
+                        <img src="wendi.png" alt="Foto Dosen" class="lecturer-photo">
+                        <div class="lecturer-details">
+                            <div class="card-info-item">
+                                <div class="icon">👨‍🏫</div>
+                                <div class="text">Prof. Ir. Wendi Usino, M.M., M.Sc., Ph.D.</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📚</div>
+                                <div class="text">3 SKS</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📍</div>
+                                <div class="card-room">2.1.4</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -1380,17 +1491,22 @@
                 <div class="card-title">Seminar Usulan Proposal</div>
                 <div class="card-code">[MSIM301]</div>
                 <div class="card-info">
-                    <div class="card-info-item">
-                        <div class="icon">👨‍🏫</div>
-                        <div class="text">Dr. Amri, S.E., M.M.</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📚</div>
-                        <div class="text">3 SKS</div>
-                    </div>
-                    <div class="card-info-item">
-                        <div class="icon">📍</div>
-                        <div class="card-room">Pasca 1</div>
+                    <div class="lecturer-info-container">
+                        <img src="amri.png" alt="Foto Dosen" class="lecturer-photo">
+                        <div class="lecturer-details">
+                            <div class="card-info-item">
+                                <div class="icon">👨‍🏫</div>
+                                <div class="text">Dr. Amri, S.E., M.M.</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📚</div>
+                                <div class="text">3 SKS</div>
+                            </div>
+                            <div class="card-info-item">
+                                <div class="icon">📍</div>
+                                <div class="card-room">Pasca 1</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -1474,7 +1590,8 @@
     <button onclick="scrollToTop()" id="btnTop" title="Kembali ke Atas">⬆</button>
 
     <footer class="page-footer">
-        Program Pascasarjana - Institut Sains dan Bisnis Atma Luhur
+        <h4>Biro Administrasi Akademik & Kemahasiswaan Program Pascasarjana - Institut Sains dan Bisnis Atma Luhur</h4>
+        <p><i>Dikembangkan Oleh Jery Jamhari</i></p>
     </footer>
 </body>
 </html>
