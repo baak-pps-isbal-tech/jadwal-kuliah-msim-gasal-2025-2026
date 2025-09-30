@@ -20,7 +20,7 @@
 
     h2 {
         text-align: center;
-        font-size: 1.6rem; /* ↓ dari 2.25rem */
+        font-size: 1.6rem;
         font-weight: 600;
         margin: 40px 20px 18px;
         color: #0f172a;
@@ -92,192 +92,6 @@
         -webkit-text-fill-color: transparent;
     }
 
-
-    .info {
-        text-align: center;
-        font-size: 1rem;
-        color: #475569;
-        margin-bottom: 20px;
-    }
-
-    .groupbox {
-        background-color: #ffffff;
-        border-radius: 18px;
-        padding: 28px;
-        margin: 40px 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        border-left: 6px solid #3b82f6;
-        transition: all 0.3s ease;
-    }
-
-    .groupbox:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-    }
-
-    .groupbox-title {
-        font-weight: 600;
-        font-size: 1.2rem;
-        margin-bottom: 18px;
-        color: #1d4ed8;
-        padding-left: 10px;
-    }
-
-    .table-wrapper {
-        overflow-x: auto;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: separate;
-        border-spacing: 0;
-        min-width: 720px;
-        font-size: 0.95rem;
-        border: 1px solid #e2e8f0;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-        background-color: #ffffff;
-        transition: all 0.2s ease-in-out;
-    }
-
-    /* Kolom Hari, Jam Mulai, Jam Selesai, SKS, Ruangan */
-    table th:nth-child(1),
-    table td:nth-child(1),
-    table th:nth-child(2),
-    table td:nth-child(2),
-    table th:nth-child(3),
-    table td:nth-child(3),
-    table th:nth-child(5),
-    table td:nth-child(5),
-    table th:nth-child(7),
-    table td:nth-child(7) {
-        text-align: center;
-    }
-
-    thead th {
-        background: linear-gradient(to right, #3b82f6, #1e3a8a);
-        color: white;
-        border-bottom: 2px solid #e2e8f0;
-    }
-
-    thead th:first-child {
-        border-top-left-radius: 12px;
-    }
-    thead th:last-child {
-        border-top-right-radius: 12px;
-    }
-
-    th {
-        font-weight: 600;
-        padding: 14px 16px;
-        color: #1e293b;
-        border-bottom: 2px solid #e2e8f0;
-        text-align: center;
-        white-space: nowrap;
-        background-color: #f8fafc;
-    }
-
-    td {
-        color: #334155;
-        background-color: #ffffff;
-        transition: background-color 0.2s ease;
-    }
-
-    tr:hover td {
-        background-color: #e0f2fe;
-        transform: scale(1.005);
-        transition: all 0.2s ease;
-    }
-
-    tr:nth-child(even) td {
-        background-color: #f8fafc;
-    }
-    tr:nth-child(odd) td {
-        background-color: #ffffff;
-    }
-
-    table th, table td {
-        padding: 14px 16px;
-        border: 1px solid #e2e8f0;
-        vertical-align: middle;
-    }
-
-    .note {
-        margin-top: 24px;
-        padding: 20px 24px;
-        background-color: #e0f2fe;
-        border-left: 4px solid #0ea5e9;
-        border-radius: 12px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-        font-size: 0.95rem;
-        flex-wrap: wrap;
-    }
-
-    .note-content {
-        color: #0369a1;
-        word-break: break-word;
-    }
-
-    .btn-zoom {
-        align-self: flex-start;
-        padding: 10px 22px;
-        background-color: #2563eb;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        font-size: 0.95rem;
-        font-weight: 500;
-        cursor: pointer;
-        text-decoration: none;
-        transition: background-color 0.3s ease, box-shadow 0.2s;
-    }
-
-    .btn-zoom:hover {
-        background-color: #1e40af;
-        box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
-    }
-
-    @media (max-width: 720px) {
-        h2, .judul {
-            font-size: 1.2rem;
-            padding-bottom: 6px;
-        }
-
-        .groupbox {
-            padding: 16px;
-            margin: 20px 12px;
-        }
-
-        th, td {
-            padding: 10px;
-            font-size: 0.85rem;
-        }
-
-        .btn-zoom {
-            padding: 8px 16px;
-            font-size: 0.85rem;
-        }
-
-        .tab-button {
-            padding: 8px 16px;
-            font-size: 0.85rem;
-        }
-
-        .note-content {
-            font-size: 0.85rem;
-        }
-
-        .page-footer {
-            font-size: 0.70rem;
-            padding: 16px;
-        }
-    }
-
     #btnTop {
         position: fixed;
         bottom: 30px;
@@ -307,6 +121,7 @@
         gap: 12px;
         flex-wrap: wrap;
         justify-content: center;
+        margin-bottom: 30px;
     }
 
     .tab-button {
@@ -337,6 +152,7 @@
     .tab-content {
         display: none;
         animation: fadeIn 0.4s ease;
+        padding-top: 10px;
     }
 
     .tab-content.active {
@@ -378,8 +194,7 @@
         margin-bottom: 10px;
     }
 
-
-        /* Popup Styles */
+    /* Popup Styles */
     .popup-overlay {
         position: fixed;
         top: 0;
@@ -514,7 +329,291 @@
         box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
     }
 
+    /* Card Schedule Styles */
+    .schedule-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 20px;
+        margin: 0 20px;
+    }
+
+    .schedule-card {
+        background: white;
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        border-left: 5px solid #3b82f6;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .schedule-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .schedule-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+        border-radius: 0 0 0 100px;
+    }
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    .card-day {
+        background: linear-gradient(135deg, #3b82f6, #1e40af);
+        color: white;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+    }
+
+    .card-time {
+        display: flex;
+        align-items: center;
+        color: #64748b;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    .card-time::before {
+        content: "🕒";
+        margin-right: 6px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #1e293b;
+        margin-bottom: 8px;
+        line-height: 1.3;
+    }
+
+    .card-code {
+        color: #64748b;
+        font-size: 0.85rem;
+        margin-bottom: 16px;
+    }
+
+    .card-info {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .card-info-item {
+        display: flex;
+        align-items: center;
+    }
+
+    .card-info-item .icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #3b82f6;
+    }
+
+    .card-info-item .text {
+        color: #475569;
+        font-size: 0.9rem;
+    }
+
+    .card-room {
+        background-color: #f1f5f9;
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-weight: 500;
+        color: #1e293b;
+        display: inline-block;
+        margin-top: 8px;
+    }
+
+    .card-footer {
+        margin-top: 20px;
+        padding-top: 16px;
+        border-top: 1px solid #e2e8f0;
+    }
+
+    .zoom-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .zoom-details {
+        color: #0369a1;
+        font-size: 0.85rem;
+    }
+
+    .zoom-btn {
+        padding: 8px 16px;
+        background: linear-gradient(135deg, #3b82f6, #1e40af);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        transition: all 0.2s ease;
+        box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+    }
+
+    .zoom-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(59, 130, 246, 0.4);
+    }
+
+    .zoom-icon {
+        height: 20px;
+        margin-right: 6px;
+    }
+
+    /* Warna gradasi untuk setiap kartu */
+    .schedule-card.blue {
+        border-left: 5px solid #3b82f6;
+    }
+    .schedule-card.blue .card-day {
+        background: linear-gradient(135deg, #3b82f6, #1e40af);
+        box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+    }
+    .schedule-card.blue .card-info-item .icon {
+        color: #3b82f6;
+    }
+    .schedule-card.blue .zoom-btn {
+        background: linear-gradient(135deg, #3b82f6, #1e40af);
+        box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+    }
+    .schedule-card.blue::before {
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+
+    .schedule-card.purple {
+        border-left: 5px solid #8b5cf6;
+    }
+    .schedule-card.purple .card-day {
+        background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+        box-shadow: 0 4px 10px rgba(139, 92, 246, 0.3);
+    }
+    .schedule-card.purple .card-info-item .icon {
+        color: #8b5cf6;
+    }
+    .schedule-card.purple .zoom-btn {
+        background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+        box-shadow: 0 4px 10px rgba(139, 92, 246, 0.3);
+    }
+    .schedule-card.purple::before {
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+
+    .schedule-card.green {
+        border-left: 5px solid #10b981;
+    }
+    .schedule-card.green .card-day {
+        background: linear-gradient(135deg, #10b981, #047857);
+        box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+    }
+    .schedule-card.green .card-info-item .icon {
+        color: #10b981;
+    }
+    .schedule-card.green .zoom-btn {
+        background: linear-gradient(135deg, #10b981, #047857);
+        box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+    }
+    .schedule-card.green::before {
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+
+    .schedule-card.orange {
+        border-left: 5px solid #f97316;
+    }
+    .schedule-card.orange .card-day {
+        background: linear-gradient(135deg, #f97316, #c2410c);
+        box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);
+    }
+    .schedule-card.orange .card-info-item .icon {
+        color: #f97316;
+    }
+    .schedule-card.orange .zoom-btn {
+        background: linear-gradient(135deg, #f97316, #c2410c);
+        box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);
+    }
+    .schedule-card.orange::before {
+        background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+
+    .schedule-card.pink {
+        border-left: 5px solid #ec4899;
+    }
+    .schedule-card.pink .card-day {
+        background: linear-gradient(135deg, #ec4899, #be185d);
+        box-shadow: 0 4px 10px rgba(236, 72, 153, 0.3);
+    }
+    .schedule-card.pink .card-info-item .icon {
+        color: #ec4899;
+    }
+    .schedule-card.pink .zoom-btn {
+        background: linear-gradient(135deg, #ec4899, #be185d);
+        box-shadow: 0 4px 10px rgba(236, 72, 153, 0.3);
+    }
+    .schedule-card.pink::before {
+        background: linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+
+    .schedule-card.teal {
+        border-left: 5px solid #14b8a6;
+    }
+    .schedule-card.teal .card-day {
+        background: linear-gradient(135deg, #14b8a6, #0f766e);
+        box-shadow: 0 4px 10px rgba(20, 184, 166, 0.3);
+    }
+    .schedule-card.teal .card-info-item .icon {
+        color: #14b8a6;
+    }
+    .schedule-card.teal .zoom-btn {
+        background: linear-gradient(135deg, #14b8a6, #0f766e);
+        box-shadow: 0 4px 10px rgba(20, 184, 166, 0.3);
+    }
+    .schedule-card.teal::before {
+        background: linear-gradient(135deg, rgba(20, 184, 166, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+
     @media (max-width: 720px) {
+        h2, .judul {
+            font-size: 1.2rem;
+            padding-bottom: 6px;
+        }
+
+        .tab-button {
+            padding: 8px 16px;
+            font-size: 0.85rem;
+        }
+
+        .page-footer {
+            font-size: 0.70rem;
+            padding: 16px;
+        }
+        
         .popup-content {
             padding: 25px;
             width: 95%;
@@ -531,10 +630,87 @@
         .popup-info li {
             font-size: 0.9rem;
         }
+        
+        .schedule-cards {
+            grid-template-columns: 1fr;
+            margin: 0 12px;
+        }
+        
+        .schedule-card {
+            padding: 18px;
+        }
+        
+        .card-title {
+            font-size: 1rem;
+        }
+        
+        .zoom-info {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .zoom-btn {
+            width: 100%;
+            justify-content: center;
+        }
     }
 </style>
 </head>
 <body>
+    <!-- Popup Informasi -->
+    <div class="popup-overlay active" id="popupOverlay">
+        <div class="popup-content">
+            <span class="popup-close" id="popupClose">&times;</span>
+            <div class="popup-header">
+                <h3>Informasi Jadwal Kuliah</h3>
+                <p>Program Studi Sistem Informasi Manajemen (Magister)</p>
+                <p>Semester Gasal Tahun Akademik 2025/2026</p>
+            </div>
+            
+            <div class="popup-info">
+                <h4>Kelas Tersedia:</h4>
+                <ul>
+                    <li>SIM1A & SIM1B - Kelas Semester 1 (NIM: 25996000**)</li>
+                    <li>SIM3GB - Kelas Semester 3 Gabungan (NIM: 24996000**)</li>
+                    <li>SIM3BI - Kelas Konsentrasi SIM Bisnis (NIM: 24996000**)</li>
+                    <li>SIM3PD - Kelas Konsentrasi SIM Pendidikan (NIM: 24996000**)</li>
+                    <li>SIM3PM - Kelas Konsentrasi SIM Pemerintahan (NIM: 24996000**)</li>
+                </ul>
+            </div>
+            
+            <div class="popup-info">
+                <h4>Hari dan Waktu Perkuliahan:</h4>
+                <ul>
+                    <li>Kamis: 18.30 - 21.00 WIB</li>
+                    <li>Jumat: 18.30 - 21.00 WIB</li>
+                    <li>Sabtu: 
+                        <ul style="margin-left: 20px; margin-top: 5px;">
+                            <li>Sesi 1: 08.00 - 10.00 WIB</li>
+                            <li>Sesi 2: 10.30 - 12.30 WIB</li>
+                            <li>Sesi 3: 13.30 - 15.30 WIB</li>
+                            <li>Sesi 4: 15.30 - 17.30 WIB</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="popup-info">
+                <h4>Metode Pembelajaran:</h4>
+                <ul>
+                    <li>Hybrid (Online dan Offline)</li>
+                    <li>Online melalui Zoom Meeting</li>
+                    <li>Offline di kampus Institut Sains dan Bisnis Atma Luhur</li>
+                </ul>
+            </div>
+            
+            <div class="popup-note">
+                <strong>Catatan:</strong> Silakan pilih tab kelas Anda di bagian atas halaman untuk melihat jadwal lengkap dan link Zoom Meeting. Passcode untuk semua meeting adalah <strong>semangatya</strong>.
+            </div>
+            
+            <button class="popup-button" id="popupButton">Lihat Jadwal</button>
+        </div>
+    </div>
+
     <div class="top-bar"></div>
 
     <h2 class="judul">
@@ -545,6 +721,7 @@
         <span class="subjudul">Program Studi Sistem Informasi Manajemen (Magister Manajemen)</span><br>
         <span class="subjudul">Semester Gasal Tahun Akademik 2025/2026</span>
     </h2>
+    
     <div class="tab-container">
         <button class="tab-button active" onclick="showTab('sim1a', this)">SIM1A</button>
         <button class="tab-button" onclick="showTab('sim1b', this)">SIM1B</button>
@@ -553,882 +730,751 @@
         <button class="tab-button" onclick="showTab('sim3pd', this)">SIM3PD (Konsentrasi)</button>
         <button class="tab-button" onclick="showTab('sim3pm', this)">SIM3PM (Konsentrasi)</button>
     </div>
+    
     <div id="sim1a" class="tab-content active">
-
-    <!-- Groupbox: Jadwal Kamis -->
-    <div class="groupbox">
-
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Hari</th>
-                        <th>Jam Mulai</th>
-                        <th>Jam Selesai</th>
-                        <th>Matakuliah</th>
-                        <th>SKS</th>
-                        <th>Dosen Pengampu</th>
-                        <th>Ruangan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Kamis</td>
-                        <td>18.30</td>
-                        <td>21.00</td>
-                        <td>Manajemen Sistem Informasi [MSIM101]</td>
-                        <td>3</td>
-                        <td>Krisna Adiyarta M., M.Sc., Ph.D.</td>
-                        <td>Online</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="note">
-            <div class="note-content">
-                Zoom Meeting ID: 821 5534 3932<br>
-                Passcode: semangatya
+        <!-- Schedule Cards -->
+        <div class="schedule-cards">
+            <!-- Card 1: Kamis - Warna Biru -->
+            <div class="schedule-card blue">
+                <div class="card-header">
+                    <div class="card-day">Kamis</div>
+                    <div class="card-time">18.30 - 21.00</div>
+                </div>
+                <div class="card-title">Manajemen Sistem Informasi</div>
+                <div class="card-code">[MSIM101]</div>
+                <div class="card-info">
+                    <div class="card-info-item">
+                        <div class="icon">👨‍🏫</div>
+                        <div class="text">Krisna Adiyarta M., M.Sc., Ph.D.</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📚</div>
+                        <div class="text">3 SKS</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📍</div>
+                        <div class="card-room">Online</div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="zoom-info">
+                        <div class="zoom-details">
+                            ID: 821 5534 3932<br>
+                            Passcode: semangatya
+                        </div>
+                        <a href="https://us06web.zoom.us/j/82155343932?pwd=BuBa1iHhunYoTf0qTt2LllCTZmUGDs.1" target="_blank" class="zoom-btn">
+                            <img src="zoom_logo.png" alt="Zoom" class="zoom-icon">
+                            Join Zoom
+                        </a>
+                    </div>
+                </div>
             </div>
-            <a class="btn-zoom" href="https://us06web.zoom.us/j/82155343932?pwd=BuBa1iHhunYoTf0qTt2LllCTZmUGDs.1" target="_blank">
-                <img src="zoom_logo.png" alt="Zoom Logo" class="zoom-icon">
-                    Buka Zoom Meeting
-            </a>
-        </div>
-    </div>
 
-    <!-- Groupbox: Jadwal Jumat -->
-    <div class="groupbox">
-        
-
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Hari</th>
-                        <th>Jam Mulai</th>
-                        <th>Jam Selesai</th>
-                        <th>Matakuliah</th>
-                        <th>SKS</th>
-                        <th>Dosen Pengampu</th>
-                        <th>Ruangan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Jumat</td>
-                        <td>18.30</td>
-                        <td>21.00</td>
-                        <td>Manajemen Pelayanan Teknologi Informasi [MSIM104]</td>
-                        <td>3</td>
-                        <td>Dr. Ir. Goenawan Brotosaputro, S.Kom., M.Sc.</td>
-                        <td>Online</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="note">
-            <div class="note-content">
-                Zoom Meeting ID: 852 6261 3345<br>
-                Passcode: semangatya
+            <!-- Card 2: Jumat - Warna Ungu -->
+            <div class="schedule-card purple">
+                <div class="card-header">
+                    <div class="card-day">Jumat</div>
+                    <div class="card-time">18.30 - 21.00</div>
+                </div>
+                <div class="card-title">Manajemen Pelayanan Teknologi Informasi</div>
+                <div class="card-code">[MSIM104]</div>
+                <div class="card-info">
+                    <div class="card-info-item">
+                        <div class="icon">👨‍🏫</div>
+                        <div class="text">Dr. Ir. Goenawan Brotosaputro, S.Kom., M.Sc.</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📚</div>
+                        <div class="text">3 SKS</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📍</div>
+                        <div class="card-room">2.1.3</div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="zoom-info">
+                        <div class="zoom-details">
+                            ID: 852 6261 3345<br>
+                            Passcode: semangatya
+                        </div>
+                        <a href="https://us06web.zoom.us/j/85262613345?pwd=YFlALDERt3pROcou3fHwiks0KVHKWL.1" target="_blank" class="zoom-btn">
+                            <img src="zoom_logo.png" alt="Zoom" class="zoom-icon">
+                            Join Zoom
+                        </a>
+                    </div>
+                </div>
             </div>
-            <a class="btn-zoom" href="https://us06web.zoom.us/j/85262613345?pwd=YFlALDERt3pROcou3fHwiks0KVHKWL.1" target="_blank">
-                <img src="zoom_logo.png" alt="Zoom Logo" class="zoom-icon">
-                Buka Zoom Meeting
-            </a>
-        </div>
-    </div>
-    <!-- Groupbox:  - Sesi 1 -->
-<!-- Groupbox:  -->
-<div class="groupbox">
-    <div class="admin-controls" style="margin-bottom: 12px; display: none;">
-      <button onclick="addRow(this)" class="btn-zoom">Tambah</button>
-      <button onclick="editRow(this)" class="btn-zoom">Edit</button>
-      <button onclick="deleteRow(this)" class="btn-zoom">Hapus</button>
-    </div>
-    <!-- Sesi 1 -->
-    <div class="table-wrapper">
-        <table>
-            <thead>
-                <tr>
-                    <th>Hari</th>
-                    <th>Jam Mulai</th>
-                    <th>Jam Selesai</th>
-                    <th>Matakuliah</th>
-                    <th>SKS</th>
-                    <th>Dosen Pengampu</th>
-                    <th>Ruangan</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Sabtu</td>
-                    <td>08.00</td>
-                    <td>10.00</td>
-                    <td>Pengembangan Strategi Bisnis [MSIM103]</td>
-                    <td>3</td>
-                    <td>Erwin, S.E., M.M., Ph.D.</td>
-                    <td>Pasca 1</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="note">
-        <div class="note-content">
-            Zoom Meeting ID: 830 8663 2559<br>
-            Passcode: semangatya
-        </div>
-        <a class="btn-zoom" href="https://us06web.zoom.us/j/83086632559?pwd=gF0eH6B3wBSGCkWN6IKXMkMj1owRSl.1" target="_blank">
-            <img src="zoom_logo.png" alt="Zoom Logo" class="zoom-icon">
-            Buka Zoom Meeting
-        </a>
-    </div>
-    <hr class="separator">
 
-    <!-- Sesi 2 -->
-    <div class="table-wrapper" style="margin-top: 20px;">
-        <table>
-            <thead>
-                <tr>
-                    <th>Hari</th>
-                    <th>Jam Mulai</th>
-                    <th>Jam Selesai</th>
-                    <th>Matakuliah</th>
-                    <th>SKS</th>
-                    <th>Dosen Pengampu</th>
-                    <th>Ruangan</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Sabtu</td>
-                    <td>10.30</td>
-                    <td>12.30</td>
-                    <td>Bisnis Intelejen dan Analisa [MSIM105]</td>
-                    <td>3</td>
-                    <td>Dr. Amri, S.E., M.M.</td>
-                    <td>Pasca 1</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="note">
-        <div class="note-content">
-            Zoom Meeting ID: 872 0761 6702<br>
-            Passcode: semangatya
-        </div>
-        <a class="btn-zoom" href="https://us06web.zoom.us/j/87207616702?pwd=7P7pwzDaTp9CVixAlcDv2YamuUu0RT.1" target="_blank">
-            <img src="zoom_logo.png" alt="Zoom Logo" class="zoom-icon">
-            Buka Zoom Meeting
-        </a>
-    </div>
-    <hr class="separator">
-
-    <!-- Sesi 3 -->
-    <div class="table-wrapper" style="margin-top: 20px;">
-        <table>
-            <thead>
-                <tr>
-                    <th>Hari</th>
-                    <th>Jam Mulai</th>
-                    <th>Jam Selesai</th>
-                    <th>Matakuliah</th>
-                    <th>SKS</th>
-                    <th>Dosen Pengampu</th>
-                    <th>Ruangan</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Sabtu</td>
-                    <td>13.30</td>
-                    <td>15.30</td>
-                    <td>Manajemen Keuangan [MSIM102]</td>
-                    <td>3</td>
-                    <td>Dr. Yulianti, S.E., M.M.</td>
-                    <td>Pasca 1</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="note">
-        <div class="note-content">
-            Zoom Meeting ID: 891 6168 8490<br>
-            Passcode: semangatya
-        </div>
-        <a class="btn-zoom" href="https://us06web.zoom.us/j/89161688490?pwd=uvk941r5LRac9iEvA15WSbMaST5iCa.1" target="_blank">
-            <img src="zoom_logo.png" alt="Zoom Logo" class="zoom-icon">
-            Buka Zoom Meeting
-        </a>
-    </div>
-    </div>
-</div>
-
-<div id="sim1b" class="tab-content">
-
-    <div class="groupbox">
-
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Hari</th>
-                        <th>Jam Mulai</th>
-                        <th>Jam Selesai</th>
-                        <th>Matakuliah</th>
-                        <th>SKS</th>
-                        <th>Dosen Pengampu</th>
-                        <th>Ruangan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Kamis</td>
-                        <td>18.30</td>
-                        <td>21.00</td>
-                        <td>Pengembangan Strategi Bisnis [MSIM103]</td>
-                        <td>3</td>
-                        <td>Erwin, S.E., M.M., Ph.D.</td>
-                        <td>Pasca 1</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="note">
-            <div class="note-content">
-                Zoom Meeting ID: 821 5534 3932<br>
-                Passcode: semangatya
+            <!-- Card 3: Sabtu Sesi 1 - Warna Hijau -->
+            <div class="schedule-card green">
+                <div class="card-header">
+                    <div class="card-day">Sabtu</div>
+                    <div class="card-time">08.00 - 10.00</div>
+                </div>
+                <div class="card-title">Pengembangan Strategi Bisnis</div>
+                <div class="card-code">[MSIM103]</div>
+                <div class="card-info">
+                    <div class="card-info-item">
+                        <div class="icon">👨‍🏫</div>
+                        <div class="text">Erwin, S.E., M.M., Ph.D.</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📚</div>
+                        <div class="text">3 SKS</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📍</div>
+                        <div class="card-room">Pasca 1</div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="zoom-info">
+                        <div class="zoom-details">
+                            ID: 830 8663 2559<br>
+                            Passcode: semangatya
+                        </div>
+                        <a href="https://us06web.zoom.us/j/83086632559?pwd=gF0eH6B3wBSGCkWN6IKXMkMj1owRSl.1" target="_blank" class="zoom-btn">
+                            <img src="zoom_logo.png" alt="Zoom" class="zoom-icon">
+                            Join Zoom
+                        </a>
+                    </div>
+                </div>
             </div>
-            <a class="btn-zoom" href="https://us06web.zoom.us/j/82155343932?pwd=BuBa1iHhunYoTf0qTt2LllCTZmUGDs.1" target="_blank">
-                <img src="zoom_logo.png" alt="Zoom Logo" class="zoom-icon">
-                Buka Zoom Meeting
-            </a>
-        </div>
-    </div>
 
-    <!-- Groupbox: Jadwal Jumat -->
-    <div class="groupbox">
-        
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Hari</th>
-                        <th>Jam Mulai</th>
-                        <th>Jam Selesai</th>
-                        <th>Matakuliah</th>
-                        <th>SKS</th>
-                        <th>Dosen Pengampu</th>
-                        <th>Ruangan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Jumat</td>
-                        <td>18.30</td>
-                        <td>21.00</td>
-                        <td>Manajemen Pelayanan Teknologi Informasi [MSIM104]</td>
-                        <td>3</td>
-                        <td>Dr. Ir. Kiswanto, S.T., M.Kom., IPM, APEC Eng.</td>
-                        <td>Pasca 1</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="note">
-            <div class="note-content">
-                Zoom Meeting ID: 852 6261 3345<br>
-                Passcode: semangatya
+            <!-- Card 4: Sabtu Sesi 2 - Warna Orange -->
+            <div class="schedule-card orange">
+                <div class="card-header">
+                    <div class="card-day">Sabtu</div>
+                    <div class="card-time">10.30 - 12.30</div>
+                </div>
+                <div class="card-title">Bisnis Intelejen dan Analisa</div>
+                <div class="card-code">[MSIM105]</div>
+                <div class="card-info">
+                    <div class="card-info-item">
+                        <div class="icon">👨‍🏫</div>
+                        <div class="text">Dr. Amri, S.E., M.M.</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📚</div>
+                        <div class="text">3 SKS</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📍</div>
+                        <div class="card-room">Pasca 1</div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="zoom-info">
+                        <div class="zoom-details">
+                            ID: 872 0761 6702<br>
+                            Passcode: semangatya
+                        </div>
+                        <a href="https://us06web.zoom.us/j/87207616702?pwd=7P7pwzDaTp9CVixAlcDv2YamuUu0RT.1" target="_blank" class="zoom-btn">
+                            <img src="zoom_logo.png" alt="Zoom" class="zoom-icon">
+                            Join Zoom
+                        </a>
+                    </div>
+                </div>
             </div>
-            <a class="btn-zoom" href="https://us06web.zoom.us/j/85262613345?pwd=YFlALDERt3pROcou3fHwiks0KVHKWL.1" target="_blank">
-                <img src="zoom_logo.png" alt="Zoom Logo" class="zoom-icon">
-                Buka Zoom Meeting
-            </a>
-        </div>
-    </div>
-    <!-- Groupbox:  - Sesi 1 -->
-<!-- Groupbox:  -->
-<div class="groupbox">
-    <div class="admin-controls" style="margin-bottom: 12px; display: none;">
-      <button onclick="addRow(this)" class="btn-zoom">Tambah</button>
-      <button onclick="editRow(this)" class="btn-zoom">Edit</button>
-      <button onclick="deleteRow(this)" class="btn-zoom">Hapus</button>
-    </div>
-    <!-- Sesi 1 -->
-    <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Hari</th>
-                        <th>Jam Mulai</th>
-                        <th>Jam Selesai</th>
-                        <th>Matakuliah</th>
-                        <th>SKS</th>
-                        <th>Dosen Pengampu</th>
-                        <th>Ruangan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Sabtu</td>
-                        <td>08.00</td>
-                        <td>10.00</td>
-                        <td>Manajemen Sistem Informasi [MSIM101]</td>
-                        <td>3</td>
-                        <td>Hidayat Febiansyah, S.Kom., M.Sc., Ph.D.</td>
-                        <td>Online</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    <div class="note">
-        <div class="note-content">
-            Zoom Meeting ID: 830 8663 2559<br>
-            Passcode: semangatya
-        </div>
-        <a class="btn-zoom" href="https://us06web.zoom.us/j/83086632559?pwd=gF0eH6B3wBSGCkWN6IKXMkMj1owRSl.1" target="_blank">
-            <img src="zoom_logo.png" alt="Zoom Logo" class="zoom-icon">
-            Buka Zoom Meeting
-        </a>
-    </div>
-    <hr class="separator">
 
-    <!-- Sesi 2 -->
-    <div class="table-wrapper" style="margin-top: 20px;">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Hari</th>
-                        <th>Jam Mulai</th>
-                        <th>Jam Selesai</th>
-                        <th>Matakuliah</th>
-                        <th>SKS</th>
-                        <th>Dosen Pengampu</th>
-                        <th>Ruangan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Sabtu</td>
-                        <td>10.30</td>
-                        <td>12.30</td>
-                        <td>Manajemen Keuangan [MSIM102]</td>
-                        <td>3</td>
-                        <td>Dr. Yulianti, S.E., M.M.</td>
-                        <td>2.1.4</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    <div class="note">
-        <div class="note-content">
-            Zoom Meeting ID: 872 0761 6702<br>
-            Passcode: semangatya
-        </div>
-        <a class="btn-zoom" href="https://us06web.zoom.us/j/87207616702?pwd=7P7pwzDaTp9CVixAlcDv2YamuUu0RT.1" target="_blank">
-            <img src="zoom_logo.png" alt="Zoom Logo" class="zoom-icon">
-            Buka Zoom Meeting
-        </a>
-    </div>
-    <hr class="separator">
-
-    <!-- Sesi 3 -->
-    <div class="table-wrapper" style="margin-top: 20px;">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Hari</th>
-                        <th>Jam Mulai</th>
-                        <th>Jam Selesai</th>
-                        <th>Matakuliah</th>
-                        <th>SKS</th>
-                        <th>Dosen Pengampu</th>
-                        <th>Ruangan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Sabtu</td>
-                        <td>13.30</td>
-                        <td>15.30</td>
-                        <td>Bisnis Intelejen dan Analisa [MSIM105]</td>
-                        <td>3</td>
-                        <td>Dr. Amri, S.E., M.M.</td>
-                        <td>2.1.4</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    <div class="note">
-        <div class="note-content">
-            Zoom Meeting ID: 891 6168 8490<br>
-            Passcode: semangatya
-        </div>
-        <a class="btn-zoom" href="https://us06web.zoom.us/j/89161688490?pwd=uvk941r5LRac9iEvA15WSbMaST5iCa.1" target="_blank">
-            <img src="zoom_logo.png" alt="Zoom Logo" class="zoom-icon">
-            Buka Zoom Meeting
-        </a>
-    </div>
-    </div>
-</div>
-
-<div id="sim3bi" class="tab-content">
-    <!-- Groupbox: Jadwal Kamis -->
-    <div class="groupbox">
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Hari</th>
-                        <th>Jam Mulai</th>
-                        <th>Jam Selesai</th>
-                        <th>Matakuliah</th>
-                        <th>SKS</th>
-                        <th>Dosen Pengampu</th>
-                        <th>Ruangan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Kamis</td>
-                        <td>18.30</td>
-                        <td>21.00</td>
-                        <td>IT Governance [MSIM303]</td>
-                        <td>3</td>
-                        <td>Dr. Ir. Goenawan Brotosaputro, S.Kom., M.Sc.</td>
-                        <td>2.1.3</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="note">
-            <div class="note-content">
-                Zoom Meeting ID: 821 5534 3932<br>
-                Passcode: semangatya
+            <!-- Card 5: Sabtu Sesi 3 - Warna Pink -->
+            <div class="schedule-card pink">
+                <div class="card-header">
+                    <div class="card-day">Sabtu</div>
+                    <div class="card-time">13.30 - 15.30</div>
+                </div>
+                <div class="card-title">Manajemen Keuangan</div>
+                <div class="card-code">[MSIM102]</div>
+                <div class="card-info">
+                    <div class="card-info-item">
+                        <div class="icon">👨‍🏫</div>
+                        <div class="text">Dr. Yulianti, S.E., M.M.</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📚</div>
+                        <div class="text">3 SKS</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📍</div>
+                        <div class="card-room">Pasca 1</div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="zoom-info">
+                        <div class="zoom-details">
+                            ID: 891 6168 8490<br>
+                            Passcode: semangatya
+                        </div>
+                        <a href="https://us06web.zoom.us/j/89161688490?pwd=uvk941r5LRac9iEvA15WSbMaST5iCa.1" target="_blank" class="zoom-btn">
+                            <img src="zoom_logo.png" alt="Zoom" class="zoom-icon">
+                            Join Zoom
+                        </a>
+                    </div>
+                </div>
             </div>
-            <a class="btn-zoom" href="https://us06web.zoom.us/j/82155343932?pwd=BuBa1iHhunYoTf0qTt2LllCTZmUGDs.1" target="_blank">
-                <img src="zoom_logo.png" alt="Zoom Logo" class="zoom-icon">
-                Buka Zoom Meeting
-            </a>
         </div>
     </div>
-    <!-- Groupbox: Jadwal Jumat -->
-    <div class="groupbox">
-        
 
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Hari</th>
-                        <th>Jam Mulai</th>
-                        <th>Jam Selesai</th>
-                        <th>Matakuliah</th>
-                        <th>SKS</th>
-                        <th>Dosen Pengampu</th>
-                        <th>Ruangan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Jumat</td>
-                        <td>18.30</td>
-                        <td>21.00</td>
-                        <td>Penjaminan Kualitas dan Manajemen [MSIM304]</td>
-                        <td>3</td>
-                        <td>Erwin, S.E., M.M., Ph.D.</td>
-                        <td>2.1.4</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="note">
-            <div class="note-content">
-                Zoom Meeting ID: 852 6261 3345<br>
-                Passcode: semangatya
+    <div id="sim1b" class="tab-content">
+        <!-- Schedule Cards -->
+        <div class="schedule-cards">
+            <!-- Card 1: Kamis - Warna Teal -->
+            <div class="schedule-card teal">
+                <div class="card-header">
+                    <div class="card-day">Kamis</div>
+                    <div class="card-time">18.30 - 21.00</div>
+                </div>
+                <div class="card-title">Pengembangan Strategi Bisnis</div>
+                <div class="card-code">[MSIM103]</div>
+                <div class="card-info">
+                    <div class="card-info-item">
+                        <div class="icon">👨‍🏫</div>
+                        <div class="text">Erwin, S.E., M.M., Ph.D.</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📚</div>
+                        <div class="text">3 SKS</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📍</div>
+                        <div class="card-room">Pasca 1</div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="zoom-info">
+                        <div class="zoom-details">
+                            ID: 821 5534 3932<br>
+                            Passcode: semangatya
+                        </div>
+                        <a href="https://us06web.zoom.us/j/82155343932?pwd=BuBa1iHhunYoTf0qTt2LllCTZmUGDs.1" target="_blank" class="zoom-btn">
+                            <img src="zoom_logo.png" alt="Zoom" class="zoom-icon">
+                            Join Zoom
+                        </a>
+                    </div>
+                </div>
             </div>
-            <a class="btn-zoom" href="https://us06web.zoom.us/j/85262613345?pwd=YFlALDERt3pROcou3fHwiks0KVHKWL.1" target="_blank">
-                <img src="zoom_logo.png" alt="Zoom Logo" class="zoom-icon">
-                Buka Zoom Meeting
-            </a>
-        </div>
-    </div>
-</div>
 
-
-<div id="sim3pd" class="tab-content">
-    <!-- Groupbox: Jadwal Kamis -->
-    <div class="groupbox">
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Hari</th>
-                        <th>Jam Mulai</th>
-                        <th>Jam Selesai</th>
-                        <th>Matakuliah</th>
-                        <th>SKS</th>
-                        <th>Dosen Pengampu</th>
-                        <th>Ruangan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Kamis</td>
-                        <td>18.30</td>
-                        <td>21.00</td>
-                        <td>Analisis Data Pendidikan [MSIM308]</td>
-                        <td>3</td>
-                        <td>Dr. Yulianti, S.E., M.M.</td>
-                        <td>2.1.4</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="note">
-            <div class="note-content">
-                Zoom Meeting ID: 821 5534 3932<br>
-                Passcode: semangatya
+            <!-- Card 2: Jumat - Warna Biru -->
+            <div class="schedule-card blue">
+                <div class="card-header">
+                    <div class="card-day">Jumat</div>
+                    <div class="card-time">18.30 - 21.00</div>
+                </div>
+                <div class="card-title">Manajemen Pelayanan Teknologi Informasi</div>
+                <div class="card-code">[MSIM104]</div>
+                <div class="card-info">
+                    <div class="card-info-item">
+                        <div class="icon">👨‍🏫</div>
+                        <div class="text">Dr. Ir. Kiswanto, S.T., M.Kom., IPM, APEC Eng.</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📚</div>
+                        <div class="text">3 SKS</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📍</div>
+                        <div class="card-room">Pasca 1</div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="zoom-info">
+                        <div class="zoom-details">
+                            ID: 852 6261 3345<br>
+                            Passcode: semangatya
+                        </div>
+                        <a href="https://us06web.zoom.us/j/85262613345?pwd=YFlALDERt3pROcou3fHwiks0KVHKWL.1" target="_blank" class="zoom-btn">
+                            <img src="zoom_logo.png" alt="Zoom" class="zoom-icon">
+                            Join Zoom
+                        </a>
+                    </div>
+                </div>
             </div>
-            <a class="btn-zoom" href="https://us06web.zoom.us/j/82155343932?pwd=BuBa1iHhunYoTf0qTt2LllCTZmUGDs.1" target="_blank">
-                <img src="zoom_logo.png" alt="Zoom Logo" class="zoom-icon">
-                Buka Zoom Meeting
-            </a>
-        </div>
-    </div>
 
-    <div class="groupbox">
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Hari</th>
-                        <th>Jam Mulai</th>
-                        <th>Jam Selesai</th>
-                        <th>Matakuliah</th>
-                        <th>SKS</th>
-                        <th>Dosen Pengampu</th>
-                        <th>Ruangan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Sabtu</td>
-                        <td>10.30</td>
-                        <td>12.30</td>
-                        <td>E-Learning dan Teknologi Pendidikan [MSIM307]</td>
-                        <td>3</td>
-                        <td>Dr. Ir. Kiswanto, S.T., M.Kom., IPM, APEC Eng.</td>
-                        <td>2.1.5</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    <div class="note">
-        <div class="note-content">
-            Zoom Meeting ID: 872 0761 6702<br>
-            Passcode: semangatya
-        </div>
-        <a class="btn-zoom" href="https://us06web.zoom.us/j/87207616702?pwd=7P7pwzDaTp9CVixAlcDv2YamuUu0RT.1" target="_blank">
-            <img src="zoom_logo.png" alt="Zoom Logo" class="zoom-icon">
-            Buka Zoom Meeting
-        </a>
-    </div>
-</div>
-</div> <!-- Tag penutup untuk sim3pd yang hilang -->
-
-<div id="sim3pm" class="tab-content">
-    <!-- Groupbox: Jadwal Jumat -->
-    <div class="groupbox">
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Hari</th>
-                        <th>Jam Mulai</th>
-                        <th>Jam Selesai</th>
-                        <th>Matakuliah</th>
-                        <th>SKS</th>
-                        <th>Dosen Pengampu</th>
-                        <th>Ruangan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Jumat</td>
-                        <td>18.30</td>
-                        <td>21.00</td>
-                        <td>Implementasi dan Integrasi Sistem [MSIM306]</td>
-                        <td>3</td>
-                        <td>Krisna Adiyarta M., S.Kom., M.Sc., Ph.D.</td>
-                        <td>2.1.5</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="note">
-            <div class="note-content">
-                Zoom Meeting ID: 852 6261 3345<br>
-                Passcode: semangatya
+            <!-- Card 3: Sabtu Sesi 1 - Warna Ungu -->
+            <div class="schedule-card purple">
+                <div class="card-header">
+                    <div class="card-day">Sabtu</div>
+                    <div class="card-time">08.00 - 10.00</div>
+                </div>
+                <div class="card-title">Manajemen Sistem Informasi</div>
+                <div class="card-code">[MSIM101]</div>
+                <div class="card-info">
+                    <div class="card-info-item">
+                        <div class="icon">👨‍🏫</div>
+                        <div class="text">Hidayat Febiansyah, S.Kom., M.Sc., Ph.D.</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📚</div>
+                        <div class="text">3 SKS</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📍</div>
+                        <div class="card-room">2.1.3</div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="zoom-info">
+                        <div class="zoom-details">
+                            ID: 830 8663 2559<br>
+                            Passcode: semangatya
+                        </div>
+                        <a href="https://us06web.zoom.us/j/83086632559?pwd=gF0eH6B3wBSGCkWN6IKXMkMj1owRSl.1" target="_blank" class="zoom-btn">
+                            <img src="zoom_logo.png" alt="Zoom" class="zoom-icon">
+                            Join Zoom
+                        </a>
+                    </div>
+                </div>
             </div>
-            <a class="btn-zoom" href="https://us06web.zoom.us/j/85262613345?pwd=YFlALDERt3pROcou3fHwiks0KVHKWL.1" target="_blank">
-                <img src="zoom_logo.png" alt="Zoom Logo" class="zoom-icon">
-                Buka Zoom Meeting
-            </a>
+
+            <!-- Card 4: Sabtu Sesi 2 - Warna Hijau -->
+            <div class="schedule-card green">
+                <div class="card-header">
+                    <div class="card-day">Sabtu</div>
+                    <div class="card-time">10.30 - 12.30</div>
+                </div>
+                <div class="card-title">Manajemen Keuangan</div>
+                <div class="card-code">[MSIM102]</div>
+                <div class="card-info">
+                    <div class="card-info-item">
+                        <div class="icon">👨‍🏫</div>
+                        <div class="text">Dr. Yulianti, S.E., M.M.</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📚</div>
+                        <div class="text">3 SKS</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📍</div>
+                        <div class="card-room">2.1.4</div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="zoom-info">
+                        <div class="zoom-details">
+                            ID: 872 0761 6702<br>
+                            Passcode: semangatya
+                        </div>
+                        <a href="https://us06web.zoom.us/j/87207616702?pwd=7P7pwzDaTp9CVixAlcDv2YamuUu0RT.1" target="_blank" class="zoom-btn">
+                            <img src="zoom_logo.png" alt="Zoom" class="zoom-icon">
+                            Join Zoom
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Sabtu Sesi 3 - Warna Orange -->
+            <div class="schedule-card orange">
+                <div class="card-header">
+                    <div class="card-day">Sabtu</div>
+                    <div class="card-time">13.30 - 15.30</div>
+                </div>
+                <div class="card-title">Bisnis Intelejen dan Analisa</div>
+                <div class="card-code">[MSIM105]</div>
+                <div class="card-info">
+                    <div class="card-info-item">
+                        <div class="icon">👨‍🏫</div>
+                        <div class="text">Dr. Amri, S.E., M.M.</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📚</div>
+                        <div class="text">3 SKS</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📍</div>
+                        <div class="card-room">2.1.4</div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="zoom-info">
+                        <div class="zoom-details">
+                            ID: 891 6168 8490<br>
+                            Passcode: semangatya
+                        </div>
+                        <a href="https://us06web.zoom.us/j/89161688490?pwd=uvk941r5LRac9iEvA15WSbMaST5iCa.1" target="_blank" class="zoom-btn">
+                            <img src="zoom_logo.png" alt="Zoom" class="zoom-icon">
+                            Join Zoom
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Groupbox: Jadwal Sabtu -->
-    <div class="groupbox">
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Hari</th>
-                        <th>Jam Mulai</th>
-                        <th>Jam Selesai</th>
-                        <th>Matakuliah</th>
-                        <th>SKS</th>
-                        <th>Dosen Pengampu</th>
-                        <th>Ruangan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Sabtu</td>
-                        <td>10.30</td>
-                        <td>12.30</td>
-                        <td>E-Governance dan Komunikasi Publik [MSIM305]</td>
-                        <td>3</td>
-                        <td>Erwin, S.E., M.M., Ph.D.</td>
-                        <td>2.1.3</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="note">
-            <div class="note-content">
-                Zoom Meeting ID: 872 0761 6702<br>
-                Passcode: semangatya
+    <div id="sim3bi" class="tab-content">
+        <!-- Schedule Cards -->
+        <div class="schedule-cards">
+            <!-- Card 1: Kamis - Warna Pink -->
+            <div class="schedule-card pink">
+                <div class="card-header">
+                    <div class="card-day">Kamis</div>
+                    <div class="card-time">18.30 - 21.00</div>
+                </div>
+                <div class="card-title">IT Governance</div>
+                <div class="card-code">[MSIM303]</div>
+                <div class="card-info">
+                    <div class="card-info-item">
+                        <div class="icon">👨‍🏫</div>
+                        <div class="text">Dr. Ir. Goenawan Brotosaputro, S.Kom., M.Sc.</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📚</div>
+                        <div class="text">3 SKS</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📍</div>
+                        <div class="card-room">2.1.3</div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="zoom-info">
+                        <div class="zoom-details">
+                            ID: 821 5534 3932<br>
+                            Passcode: semangatya
+                        </div>
+                        <a href="https://us06web.zoom.us/j/82155343932?pwd=BuBa1iHhunYoTf0qTt2LllCTZmUGDs.1" target="_blank" class="zoom-btn">
+                            <img src="zoom_logo.png" alt="Zoom" class="zoom-icon">
+                            Join Zoom
+                        </a>
+                    </div>
+                </div>
             </div>
-            <a class="btn-zoom" href="https://us06web.zoom.us/j/87207616702?pwd=7P7pwzDaTp9CVixAlcDv2YamuUu0RT.1" target="_blank">
-                <img src="zoom_logo.png" alt="Zoom Logo" class="zoom-icon">
-                Buka Zoom Meeting
-            </a>
-        </div>
-    </div>
-</div>
-<div id="sim3gb" class="tab-content">
-    <!-- Groupbox: Jadwal Jumat -->
-    <div class="groupbox">
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Hari</th>
-                        <th>Jam Mulai</th>
-                        <th>Jam Selesai</th>
-                        <th>Matakuliah</th>
-                        <th>SKS</th>
-                        <th>Dosen Pengampu</th>
-                        <th>Ruangan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Sabtu</td>
-                        <td>08.00</td>
-                        <td>10.00</td>
-                        <td>Seminar Usulan Proposal [MSIM301]</td>
-                        <td>3</td>
-                        <td>Dr. Amri, S.E., M.M.</td>
-                        <td>2.1.4</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
 
-        <div class="note">
-            <div class="note-content">
-                Zoom Meeting ID: 830 8663 2559<br>
-                Passcode: semangatya
+            <!-- Card 2: Jumat - Warna Teal -->
+            <div class="schedule-card teal">
+                <div class="card-header">
+                    <div class="card-day">Jumat</div>
+                    <div class="card-time">18.30 - 21.00</div>
+                </div>
+                <div class="card-title">Penjaminan Kualitas dan Manajemen</div>
+                <div class="card-code">[MSIM304]</div>
+                <div class="card-info">
+                    <div class="card-info-item">
+                        <div class="icon">👨‍🏫</div>
+                        <div class="text">Erwin, S.E., M.M., Ph.D.</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📚</div>
+                        <div class="text">3 SKS</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📍</div>
+                        <div class="card-room">2.1.4</div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="zoom-info">
+                        <div class="zoom-details">
+                            ID: 852 6261 3345<br>
+                            Passcode: semangatya
+                        </div>
+                        <a href="https://us06web.zoom.us/j/85262613345?pwd=YFlALDERt3pROcou3fHwiks0KVHKWL.1" target="_blank" class="zoom-btn">
+                            <img src="zoom_logo.png" alt="Zoom" class="zoom-icon">
+                            Join Zoom
+                        </a>
+                    </div>
+                </div>
             </div>
-            <a class="btn-zoom" href="https://us06web.zoom.us/j/83086632559?pwd=gF0eH6B3wBSGCkWN6IKXMkMj1owRSl.1" target="_blank">
-                <img src="zoom_logo.png" alt="Zoom Logo" class="zoom-icon">
-                Buka Zoom Meeting
-            </a>
         </div>
     </div>
 
-    <!-- Groupbox: Jadwal Sabtu -->
-    <div class="groupbox">
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Hari</th>
-                        <th>Jam Mulai</th>
-                        <th>Jam Selesai</th>
-                        <th>Matakuliah</th>
-                        <th>SKS</th>
-                        <th>Dosen Pengampu</th>
-                        <th>Ruangan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Sabtu</td>
-                        <td>13.30</td>
-                        <td>15.30</td>
-                        <td>Manajemen Sistem Informasi Global [MSIM302]</td>
-                        <td>3</td>
-                        <td>Prof. Ir. Wendi Usino, M.M., M.Sc., Ph.D.</td>
-                        <td>2.1.3</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="note">
-            <div class="note-content">
-                Zoom Meeting ID: 891 6168 8490<br>
-                Passcode: semangatya
+    <div id="sim3pd" class="tab-content">
+        <!-- Schedule Cards -->
+        <div class="schedule-cards">
+            <!-- Card 1: Kamis - Warna Orange -->
+            <div class="schedule-card orange">
+                <div class="card-header">
+                    <div class="card-day">Kamis</div>
+                    <div class="card-time">18.30 - 21.00</div>
+                </div>
+                <div class="card-title">Analisis Data Pendidikan</div>
+                <div class="card-code">[MSIM308]</div>
+                <div class="card-info">
+                    <div class="card-info-item">
+                        <div class="icon">👨‍🏫</div>
+                        <div class="text">Dr. Yulianti, S.E., M.M.</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📚</div>
+                        <div class="text">3 SKS</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📍</div>
+                        <div class="card-room">2.1.4</div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="zoom-info">
+                        <div class="zoom-details">
+                            ID: 821 5534 3932<br>
+                            Passcode: semangatya
+                        </div>
+                        <a href="https://us06web.zoom.us/j/82155343932?pwd=BuBa1iHhunYoTf0qTt2LllCTZmUGDs.1" target="_blank" class="zoom-btn">
+                            <img src="zoom_logo.png" alt="Zoom" class="zoom-icon">
+                            Join Zoom
+                        </a>
+                    </div>
+                </div>
             </div>
-            <a class="btn-zoom" href="https://us06web.zoom.us/j/89161688490?pwd=uvk941r5LRac9iEvA15WSbMaST5iCa.1" target="_blank">
-                <img src="zoom_logo.png" alt="Zoom Logo" class="zoom-icon">
-                Buka Zoom Meeting
-            </a>
+
+            <!-- Card 2: Sabtu - Warna Hijau -->
+            <div class="schedule-card green">
+                <div class="card-header">
+                    <div class="card-day">Sabtu</div>
+                    <div class="card-time">10.30 - 12.30</div>
+                </div>
+                <div class="card-title">E-Learning dan Teknologi Pendidikan</div>
+                <div class="card-code">[MSIM307]</div>
+                <div class="card-info">
+                    <div class="card-info-item">
+                        <div class="icon">👨‍🏫</div>
+                        <div class="text">Dr. Ir. Kiswanto, S.T., M.Kom., IPM, APEC Eng.</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📚</div>
+                        <div class="text">3 SKS</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📍</div>
+                        <div class="card-room">2.1.5</div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="zoom-info">
+                        <div class="zoom-details">
+                            ID: 872 0761 6702<br>
+                            Passcode: semangatya
+                        </div>
+                        <a href="https://us06web.zoom.us/j/87207616702?pwd=7P7pwzDaTp9CVixAlcDv2YamuUu0RT.1" target="_blank" class="zoom-btn">
+                            <img src="zoom_logo.png" alt="Zoom" class="zoom-icon">
+                            Join Zoom
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<script>
+
+    <div id="sim3pm" class="tab-content">
+        <!-- Schedule Cards -->
+        <div class="schedule-cards">
+            <!-- Card 1: Jumat - Warna Ungu -->
+            <div class="schedule-card purple">
+                <div class="card-header">
+                    <div class="card-day">Jumat</div>
+                    <div class="card-time">18.30 - 21.00</div>
+                </div>
+                <div class="card-title">Implementasi dan Integrasi Sistem</div>
+                <div class="card-code">[MSIM306]</div>
+                <div class="card-info">
+                    <div class="card-info-item">
+                        <div class="icon">👨‍🏫</div>
+                        <div class="text">Krisna Adiyarta M., S.Kom., M.Sc., Ph.D.</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📚</div>
+                        <div class="text">3 SKS</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📍</div>
+                        <div class="card-room">2.1.5</div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="zoom-info">
+                        <div class="zoom-details">
+                            ID: 852 6261 3345<br>
+                            Passcode: semangatya
+                        </div>
+                        <a href="https://us06web.zoom.us/j/85262613345?pwd=YFlALDERt3pROcou3fHwiks0KVHKWL.1" target="_blank" class="zoom-btn">
+                            <img src="zoom_logo.png" alt="Zoom" class="zoom-icon">
+                            Join Zoom
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Sabtu - Warna Biru -->
+            <div class="schedule-card blue">
+                <div class="card-header">
+                    <div class="card-day">Sabtu</div>
+                    <div class="card-time">10.30 - 12.30</div>
+                </div>
+                <div class="card-title">E-Governance dan Komunikasi Publik</div>
+                <div class="card-code">[MSIM305]</div>
+                <div class="card-info">
+                    <div class="card-info-item">
+                        <div class="icon">👨‍🏫</div>
+                        <div class="text">Erwin, S.E., M.M., Ph.D.</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📚</div>
+                        <div class="text">3 SKS</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📍</div>
+                        <div class="card-room">2.1.3</div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="zoom-info">
+                        <div class="zoom-details">
+                            ID: 872 0761 6702<br>
+                            Passcode: semangatya
+                        </div>
+                        <a href="https://us06web.zoom.us/j/87207616702?pwd=7P7pwzDaTp9CVixAlcDv2YamuUu0RT.1" target="_blank" class="zoom-btn">
+                            <img src="zoom_logo.png" alt="Zoom" class="zoom-icon">
+                            Join Zoom
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sim3gb" class="tab-content">
+        <!-- Schedule Cards -->
+        <div class="schedule-cards">
+            <!-- Card 1: Sabtu Sesi 1 - Warna Teal -->
+            <div class="schedule-card teal">
+                <div class="card-header">
+                    <div class="card-day">Sabtu</div>
+                    <div class="card-time">08.00 - 10.00</div>
+                </div>
+                <div class="card-title">Manajemen Sistem Informasi Global</div>
+                <div class="card-code">[MSIM302]</div>
+                <div class="card-info">
+                    <div class="card-info-item">
+                        <div class="icon">👨‍🏫</div>
+                        <div class="text">Prof. Ir. Wendi Usino, M.M., M.Sc., Ph.D.</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📚</div>
+                        <div class="text">3 SKS</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📍</div>
+                        <div class="card-room">2.1.4</div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="zoom-info">
+                        <div class="zoom-details">
+                            ID: 830 8663 2559<br>
+                            Passcode: semangatya
+                        </div>
+                        <a href="https://us06web.zoom.us/j/83086632559?pwd=gF0eH6B3wBSGCkWN6IKXMkMj1owRSl.1" target="_blank" class="zoom-btn">
+                            <img src="zoom_logo.png" alt="Zoom" class="zoom-icon">
+                            Join Zoom
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Sabtu Sesi 2 - Warna Pink -->
+            <div class="schedule-card pink">
+                <div class="card-header">
+                    <div class="card-day">Sabtu</div>
+                    <div class="card-time">15.30 - 17.30</div>
+                </div>
+                <div class="card-title">Seminar Usulan Proposal</div>
+                <div class="card-code">[MSIM301]</div>
+                <div class="card-info">
+                    <div class="card-info-item">
+                        <div class="icon">👨‍🏫</div>
+                        <div class="text">Dr. Amri, S.E., M.M.</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📚</div>
+                        <div class="text">3 SKS</div>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="icon">📍</div>
+                        <div class="card-room">Pasca 1</div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="zoom-info">
+                        <div class="zoom-details">
+                            ID: 891 6168 8490<br>
+                            Passcode: semangatya
+                        </div>
+                        <a href="https://us06web.zoom.us/j/89161688490?pwd=uvk941r5LRac9iEvA15WSbMaST5iCa.1" target="_blank" class="zoom-btn">
+                            <img src="zoom_logo.png" alt="Zoom" class="zoom-icon">
+                            Join Zoom
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
         // Popup functionality
-    document.addEventListener('DOMContentLoaded', function() {
-        const popupOverlay = document.getElementById('popupOverlay');
-        const popupClose = document.getElementById('popupClose');
-        const popupButton = document.getElementById('popupButton');
-        
-        // Check if popup has been shown before
-        const hasSeenPopup = localStorage.getItem('hasSeenPopup');
-        
-        // Show popup if user hasn't seen it before
-        if (!hasSeenPopup) {
-            setTimeout(() => {
-                popupOverlay.classList.add('active');
-            }, 500);
-        }
-        
-        // Close popup when close button is clicked
-        popupClose.addEventListener('click', function() {
-            popupOverlay.classList.remove('active');
-            localStorage.setItem('hasSeenPopup', 'true');
-        });
-        
-        // Close popup when button is clicked
-        popupButton.addEventListener('click', function() {
-            popupOverlay.classList.remove('active');
-            localStorage.setItem('hasSeenPopup', 'true');
-        });
-        
-        // Close popup when clicking outside the popup content
-        popupOverlay.addEventListener('click', function(e) {
-            if (e.target === popupOverlay) {
+        document.addEventListener('DOMContentLoaded', function() {
+            const popupOverlay = document.getElementById('popupOverlay');
+            const popupClose = document.getElementById('popupClose');
+            const popupButton = document.getElementById('popupButton');
+            
+            // Check if popup has been shown before
+            const hasSeenPopup = localStorage.getItem('hasSeenPopup');
+            
+            // Show popup if user hasn't seen it before
+            if (!hasSeenPopup) {
+                setTimeout(() => {
+                    popupOverlay.classList.add('active');
+                }, 500);
+            }
+            
+            // Close popup when close button is clicked
+            popupClose.addEventListener('click', function() {
                 popupOverlay.classList.remove('active');
                 localStorage.setItem('hasSeenPopup', 'true');
+            });
+            
+            // Close popup when button is clicked
+            popupButton.addEventListener('click', function() {
+                popupOverlay.classList.remove('active');
+                localStorage.setItem('hasSeenPopup', 'true');
+            });
+            
+            // Close popup when clicking outside the popup content
+            popupOverlay.addEventListener('click', function(e) {
+                if (e.target === popupOverlay) {
+                    popupOverlay.classList.remove('active');
+                    localStorage.setItem('hasSeenPopup', 'true');
+                }
+            });
+        });
+        
+        // Scroll ke atas saat tombol diklik
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Gabungkan scroll event dalam satu tempat
+        window.addEventListener("scroll", function () {
+            const btn = document.getElementById("btnTop");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
             }
         });
-    });
-    // Scroll ke atas saat tombol diklik
-    function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
 
-    // Gabungkan scroll event dalam satu tempat
-    window.addEventListener("scroll", function () {
-        const btn = document.getElementById("btnTop");
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            btn.style.display = "block";
-        } else {
-            btn.style.display = "none";
+        // Fungsi tab
+        function showTab(tabId, buttonElement) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-button').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            buttonElement.classList.add('active');
         }
-    });
+    </script>
 
-    // Fungsi tab
-    function showTab(tabId, buttonElement) {
-        document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-        document.querySelectorAll('.tab-button').forEach(el => el.classList.remove('active'));
-        document.getElementById(tabId).classList.add('active');
-        buttonElement.classList.add('active');
-    }
+    <button onclick="scrollToTop()" id="btnTop" title="Kembali ke Atas">⬆</button>
 
-</script>
-
-<button onclick="scrollToTop()" id="btnTop" title="Kembali ke Atas">⬆</button>
-
-<footer class="page-footer">
-    Program Pascasarjana - Institut Sains dan Bisnis Atma Luhur
-</footer>
-</div>
-
-
+    <footer class="page-footer">
+        Program Pascasarjana - Institut Sains dan Bisnis Atma Luhur
+    </footer>
 </body>
-<!-- Popup Informasi -->
-<div class="popup-overlay active" id="popupOverlay">
-    <div class="popup-content">
-        <span class="popup-close" id="popupClose">&times;</span>
-        <div class="popup-header">
-            <h3>Informasi Jadwal Kuliah</h3>
-            <p>Program Studi Sistem Informasi Manajemen (Magister)</p>
-            <p>Semester Gasal Tahun Akademik 2025/2026</p>
-        </div>
-        
-        <div class="popup-info">
-            <h4>Kelas Tersedia:</h4>
-            <ul>
-                <li>SIM1A & SIM1B - Kelas Semester 1 (NIM: 2599******)</li>
-                <li>SIM3GB - Kelas Semester 3 Gabungan (NIM: 2499******)</li>
-                <li>SIM3BI - Kelas Konsentrasi SIM Bisnis (NIM: 2499******)</li>
-                <li>SIM3PD - Kelas Konsentrasi SIM Pendidikan (NIM: 2499******)</li>
-                <li>SIM3PM - Kelas Konsentrasi SIM Pemerintahan (NIM: 2499******)</li>
-            </ul>
-        </div>
-        
-        <div class="popup-info">
-            <h4>Hari dan Waktu Perkuliahan:</h4>
-            <ul>
-                <li>Kamis: 18.30 - 21.00 WIB</li>
-                <li>Jumat: 18.30 - 21.00 WIB</li>
-                <li>Sabtu: 
-                    <ul style="margin-left: 20px; margin-top: 5px;">
-                        <li>Sesi 1: 08.00 - 10.00 WIB</li>
-                        <li>Sesi 2: 10.30 - 12.30 WIB</li>
-                        <li>Sesi 3: 13.30 - 15.30 WIB</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="popup-info">
-            <h4>Metode Pembelajaran:</h4>
-            <ul>
-                <li>Hybrid (Online dan Offline)</li>
-                <li>Online melalui Zoom Meeting</li>
-                <li>Offline di kampus Institut Sains dan Bisnis Atma Luhur</li>
-            </ul>
-        </div>
-        
-        <div class="popup-note">
-            <strong>Catatan:</strong> Silakan pilih tab kelas Anda di bagian atas halaman untuk melihat jadwal lengkap dan link Zoom Meeting. Passcode untuk semua meeting adalah <strong>semangatya</strong>.
-        </div>
-        
-        <button class="popup-button" id="popupButton">Lihat Jadwal</button>
-    </div>
-</div>
 </html>
-
