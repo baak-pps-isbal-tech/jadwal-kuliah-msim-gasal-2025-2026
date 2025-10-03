@@ -329,6 +329,56 @@
         box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
     }
 
+    /* Tambahkan CSS untuk peringatan penting */
+    .popup-warning {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+        border-radius: 12px;
+        padding: 16px 20px;
+        margin: 0 0 25px 0;
+        box-shadow: 0 8px 20px rgba(238, 90, 36, 0.3);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .popup-warning::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, rgba(255,255,255,0.2) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, transparent 75%, transparent);
+        background-size: 30px 30px;
+        animation: warning-move 1s linear infinite;
+    }
+
+    @keyframes warning-move {
+        0% { background-position: 0 0; }
+        100% { background-position: 30px 30px; }
+    }
+
+    .popup-warning-icon {
+        font-size: 28px;
+        margin-right: 15px;
+        animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+
+    .popup-warning-text {
+        color: white;
+        font-weight: 700;
+        font-size: 1.1rem;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        letter-spacing: 0.5px;
+    }
+
     /* Card Schedule Styles */
     .schedule-cards {
         display: grid;
@@ -705,14 +755,20 @@
                 <p>Semester Gasal Tahun Akademik 2025/2026</p>
             </div>
             
+            <!-- Tambahkan elemen peringatan penting -->
+            <div class="popup-warning">
+                <span class="popup-warning-icon">⚠️</span>
+                <span class="popup-warning-text">PENTING: Harap Baca dengan Teliti</span>
+            </div>
+            
             <div class="popup-info">
                 <h4>Kelas Tersedia:</h4>
                 <ul>
-                    <li>SIM1A & SIM1B - Kelas Semester 1 (NIM: 25996000**)</li>
-                    <li>SIM3GB - Kelas Semester 3 Gabungan (NIM: 24996000**)</li>
-                    <li>SIM3BI - Kelas Konsentrasi SIM Bisnis (NIM: 24996000**)</li>
-                    <li>SIM3PD - Kelas Konsentrasi SIM Pendidikan (NIM: 24996000**)</li>
-                    <li>SIM3PM - Kelas Konsentrasi SIM Pemerintahan (NIM: 24996000**)</li>
+                    <li>SIM1A & SIM1B = Kelas Semester 1 (NIM: 25996000**)</li>
+                    <li>SIM3GB = Kelas Semester 3 Gabungan (NIM: 24996000**)</li>
+                    <li>SIM3BI = Kelas Konsentrasi SIM Bisnis (NIM: 24996000**)</li>
+                    <li>SIM3PD = Kelas Konsentrasi SIM Pendidikan (NIM: 24996000**)</li>
+                    <li>SIM3PM = Kelas Konsentrasi SIM Pemerintahan (NIM: 24996000**)</li>
                 </ul>
             </div>
             
