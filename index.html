@@ -147,16 +147,21 @@
         background-color: #1e3a8a;
         color: white;
         box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
+        transform: translateY(-2px);
     }
 
     .tab-content {
         display: none;
-        animation: fadeIn 0.4s ease;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: all 0.5s ease;
         padding-top: 10px;
     }
 
     .tab-content.active {
         display: block;
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .page-footer {
@@ -393,7 +398,10 @@
         padding: 24px;
         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
         border-left: 5px solid #3b82f6;
-        transition: all 0.3s ease;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s ease;
+        transition-delay: calc(var(--index) * 0.1s);
         position: relative;
         overflow: hidden;
     }
@@ -401,6 +409,11 @@
     .schedule-card:hover {
         transform: translateY(-8px);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .tab-content.active .schedule-card {
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .schedule-card::before {
@@ -680,6 +693,39 @@
     .schedule-card.teal::before {
         background: linear-gradient(135deg, rgba(20, 184, 166, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
     }
+    .welcome-message {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 300px;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .message-content {
+        background: white;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        max-width: 500px;
+    }
+
+    .message-icon {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    .message-content h3 {
+        color: #1e293b;
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+    }
+
+    .message-content p {
+        color: #64748b;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
 
     @media (max-width: 720px) {
         h2, .judul {
@@ -827,15 +873,23 @@
     </h2>
     
     <div class="tab-container">
-        <button class="tab-button active" onclick="showTab('sim1a', this)">SIM1A</button>
+        <button class="tab-button" onclick="showTab('sim1a', this)">SIM1A</button>
         <button class="tab-button" onclick="showTab('sim1b', this)">SIM1B</button>
         <button class="tab-button" onclick="showTab('sim3gb', this)">SIM3GB</button>
         <button class="tab-button" onclick="showTab('sim3bi', this)">SIM3BI (Konsentrasi)</button>
         <button class="tab-button" onclick="showTab('sim3pd', this)">SIM3PD (Konsentrasi)</button>
         <button class="tab-button" onclick="showTab('sim3pm', this)">SIM3PM (Konsentrasi)</button>
     </div>
+
+    <div id="welcomeMessage" class="welcome-message">
+        <div class="message-content">
+            <div class="message-icon">📅</div>
+            <h3>Silakan Pilih Kelas Anda</h3>
+            <p>Klik tab di atas untuk melihat jadwal perkuliahan sesuai kelas Anda</p>
+        </div>
+    </div>
     
-    <div id="sim1a" class="tab-content active">
+    <div id="sim1a" class="tab-content">
         <!-- Schedule Cards -->
         <div class="schedule-cards">
             <!-- Card 1: Kamis - Warna Biru -->
@@ -1730,10 +1784,41 @@
 
         // Fungsi tab
         function showTab(tabId, buttonElement) {
-            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.tab-button').forEach(el => el.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active');
+            const welcomeMessage = document.getElementById('welcomeMessage');
+            if (welcomeMessage) {
+                welcomeMessage.style.display = 'none';
+            }
+            // Sembunyikan semua tab content
+            document.querySelectorAll('.tab-content').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Hapus class active dari semua tombol tab
+            document.querySelectorAll('.tab-button').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Tambahkan class active ke tab yang dipilih
+            setTimeout(() => {
+                document.getElementById(tabId).classList.add('active');
+                
+                // Tambahkan index untuk animasi bertahap pada cards
+                const cards = document.querySelectorAll(`#${tabId} .schedule-card`);
+                cards.forEach((card, index) => {
+                    card.style.setProperty('--index', index);
+                });
+            }, 100);
+            
+            // Tambahkan class active ke tombol yang diklik
             buttonElement.classList.add('active');
+            
+            // Scroll ke area jadwal
+            setTimeout(() => {
+                document.getElementById(tabId).scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                });
+            }, 500);
         }
     </script>
 
@@ -1741,8 +1826,7 @@
 
     <footer class="page-footer">
         <h4>Biro Administrasi Akademik & Kemahasiswaan Program Pascasarjana - Institut Sains dan Bisnis Atma Luhur</h4>
-        <p><i>© Oktober 2025 - IT Division BAAK Program Pascasarjana</i></p>
+        <p><i>© Oktober 2025 IT - Division BAAK Program Pascasarjana</i></p>
     </footer>
 </body>
 </html>
-
