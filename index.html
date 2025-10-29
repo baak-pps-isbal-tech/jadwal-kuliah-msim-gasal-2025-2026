@@ -731,6 +731,13 @@
         font-size: 1rem;
         line-height: 1.6;
     }
+    .popup-header-image {
+        width: 100%;
+        max-width: 310px;
+        height: auto;
+        display: block;
+        margin: 0 auto 15px;
+    }
 
     @media (max-width: 720px) {
         h2, .judul {
@@ -795,12 +802,15 @@
     }
 </style>
 </head>
-<body>
-    <!-- Popup Informasi -->
-    <div class="popup-overlay active" id="popupOverlay">
+    <body>
+        <!-- Popup Informasi -->
+        <div class="popup-overlay active" id="popupOverlay">
         <div class="popup-content">
             <span class="popup-close" id="popupClose">&times;</span>
             <div class="popup-header">
+                <!-- Gambar ditambahkan di sini -->
+                <img src="popup111.png" alt="Gambar Jadwal Kuliah" class="popup-header-image">
+                
                 <h3>Informasi Jadwal Kuliah</h3>
                 <p>Program Studi Sistem Informasi Manajemen (Magister)</p>
                 <p>Semester Gasal Tahun Akademik 2025/2026</p>
@@ -809,7 +819,7 @@
             <!-- Tambahkan elemen peringatan penting -->
             <div class="popup-warning">
                 <span class="popup-warning-icon">⚠️</span>
-                <span class="popup-warning-text">PENTING: Harap Dibaca Terlebih Dahulu</span>
+                <span class="popup-warning-text">PENTING: Scroll Kebawah dan Harap Dibaca Terlebih Dahulu</span>
             </div>
             
             <div class="popup-info">
