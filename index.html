@@ -15,114 +15,152 @@
         box-sizing: border-box;
     }
 
-    /* =======================
-       GLOBAL
-    ======================= */
     body {
         font-family: 'Poppins', sans-serif;
         margin: 0;
         padding: 0;
-        background: linear-gradient(135deg, #0b1f1a, #123c2e, #1f5f4a);
-        background-attachment: fixed;
-        color: #fefce8;
+        background-color: #f1f5f9;
+        color: #1e293b;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin: 40px 20px 18px;
+        color: #0f172a;
+        letter-spacing: -0.3px;
         position: relative;
+        padding-bottom: 10px;
     }
 
-    /* Islamic subtle pattern */
-    body::after {
+    h2::after {
         content: "";
-        position: fixed;
-        inset: 0;
-        background-image: radial-gradient(rgba(255,215,0,0.07) 1px, transparent 1px);
-        background-size: 40px 40px;
-        pointer-events: none;
-        z-index: 0;
+        display: block;
+        width: 70px;
+        height: 2.5px;
+        background: linear-gradient(to right, #2563eb, #60a5fa);
+        margin: 12px auto 0;
+        border-radius: 2px;
+    }
+    h2 span.gradient {
+        background: linear-gradient(to right, #2563eb, #1e40af);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .zoom-icon {
+        height: 30px;
+        vertical-align: middle;
+        margin-right: 10px;
     }
 
-    /* =======================
-       TOP BAR
-    ======================= */
-    .top-bar {
-        height: 12px;
-        background: linear-gradient(to right, #ffd700, #14532d);
-    }
-
-    /* =======================
-       HEADER
-    ======================= */
     .judul {
         text-align: center;
         font-size: 1.9rem;
         font-weight: 700;
+        color: #0f172a;
         margin: 40px 20px 30px;
         padding: 32px 20px;
+        line-height: 1.3;
         border-radius: 20px;
-        background: linear-gradient(135deg, #14532d, #052e16);
-        color: #ffd700;
-        box-shadow: 0 0 40px rgba(255, 215, 0, 0.15);
-        position: relative;
+        background: linear-gradient(-45deg, #eff6ff, #dbeafe, #bfdbfe, #93c5fd);
+        background-size: 400% 400%;
+        animation: gradientFlow 10s ease infinite;
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.05);
+    }
+    
+    @keyframes gradientFlow {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
     }
 
-    .judul::before {
-        content: "☪";
-        position: absolute;
-        top: 12px;
-        right: 25px;
-        font-size: 2rem;
-        color: rgba(255, 215, 0, 0.5);
+    .judul::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(to right, #2563eb, #1e3a8a);
+        margin: 16px auto 0;
+        border-radius: 4px;
     }
 
     .subjudul {
-        font-size: 0.85rem;
-        color: #fef9c3;
+        font-size: 0.80rem;
+        font-weight: 500;
+        color: #475569;
     }
 
-    .logo {
-        max-width: 110px;
+    .gradient {
+        background: linear-gradient(to right, #2563eb, #1e40af);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
-    /* =======================
-       TAB BUTTON
-    ======================= */
+    #btnTop {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 99;
+        font-size: 20px;
+        background-color: #0f172a;
+        color: white;
+        border: none;
+        padding: 14px 18px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    #btnTop:hover {
+        background-color: #1e293b;
+        transform: scale(1.1);
+    }
+
     .tab-container {
+        margin-top: 25px;
+        padding: 0 20px;
         display: flex;
         gap: 12px;
         flex-wrap: wrap;
         justify-content: center;
         margin-bottom: 30px;
-        position: relative;
     }
 
     .tab-button {
         padding: 12px 24px;
-        background: #14532d;
-        border: 1px solid #ffd700;
+        background-color: #e2e8f0;
+        border: none;
         border-radius: 8px;
+        font-size: 1rem;
         font-weight: 600;
-        color: #ffd700;
+        color: #1e293b;
         cursor: pointer;
-        transition: 0.3s ease;
+        transition: all 0.2s ease;
     }
 
     .tab-button:hover {
-        background: #166534;
-        box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+        background-color: #dbeafe;
+        color: #1e3a8a;
+        transform: translateY(-2px);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
     }
 
     .tab-button.active {
-        background: linear-gradient(135deg, #ffd700, #facc15);
-        color: #14532d;
+        background-color: #1e3a8a;
+        color: white;
+        box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
+        transform: translateY(-2px);
     }
 
-    /* =======================
-       TAB CONTENT
-    ======================= */
     .tab-content {
         display: none;
         opacity: 0;
         transform: translateY(-20px);
-        transition: 0.5s ease;
-        position: relative;
+        transition: all 0.5s ease;
+        padding-top: 10px;
     }
 
     .tab-content.active {
@@ -131,20 +169,227 @@
         transform: translateY(0);
     }
 
-    /* =======================
-       WELCOME MESSAGE
-    ======================= */
-    .message-content {
-        background: #14532d;
-        padding: 40px;
-        border-radius: 16px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-        color: #fef9c3;
+    .page-footer {
+        margin-top: 60px;
+        padding: 20px 16px;
+        text-align: center;
+        font-size: 0.85rem;
+        background-color: #f1f5f9;
+        color: #64748b;
+        border-top: 1px solid #e2e8f0;
+        box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.02);
     }
 
-    /* =======================
-       SCHEDULE CARD
-    ======================= */
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    .top-bar {
+        width: 100%;
+        height: 12px;
+        background: linear-gradient(to right, #0f172a, #2563eb);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 1000;
+    }
+    .logo-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .logo {
+        max-width: 120px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    /* Popup Styles */
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .popup-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .popup-content {
+        background-color: white;
+        border-radius: 20px;
+        padding: 40px;
+        max-width: 700px;
+        width: 90%;
+        max-height: 80vh;
+        overflow-y: auto;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        transform: scale(0.7);
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .popup-overlay.active .popup-content {
+        transform: scale(1);
+    }
+
+    .popup-close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 30px;
+        color: #64748b;
+        cursor: pointer;
+        transition: color 0.2s ease;
+    }
+
+    .popup-close:hover {
+        color: #1e293b;
+    }
+
+    .popup-header {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .popup-header h3 {
+        font-size: 1.8rem;
+        color: #1e293b;
+        margin: 0 0 10px;
+        background: linear-gradient(to right, #2563eb, #1e40af);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .popup-header p {
+        color: #64748b;
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .popup-info {
+        margin-bottom: 25px;
+    }
+
+    .popup-info h4 {
+        font-size: 1.2rem;
+        color: #1e293b;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #e2e8f0;
+    }
+
+    .popup-info ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .popup-info li {
+        padding: 8px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .popup-info li:before {
+        content: "•";
+        color: #2563eb;
+        font-weight: bold;
+        margin-right: 10px;
+        font-size: 1.2rem;
+    }
+
+    .popup-note {
+        background-color: #f1f5f9;
+        border-left: 4px solid #2563eb;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 20px;
+        color: #475569;
+    }
+
+    .popup-button {
+        display: block;
+        width: 100%;
+        padding: 12px 20px;
+        background: linear-gradient(to right, #2563eb, #1e40af);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 25px;
+    }
+
+    .popup-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+    }
+
+    /* Tambahkan CSS untuk peringatan penting */
+    .popup-warning {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+        border-radius: 12px;
+        padding: 16px 20px;
+        margin: 0 0 25px 0;
+        box-shadow: 0 8px 20px rgba(238, 90, 36, 0.3);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .popup-warning::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, rgba(255,255,255,0.2) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, transparent 75%, transparent);
+        background-size: 30px 30px;
+        animation: warning-move 1s linear infinite;
+    }
+
+    @keyframes warning-move {
+        0% { background-position: 0 0; }
+        100% { background-position: 30px 30px; }
+    }
+
+    .popup-warning-icon {
+        font-size: 28px;
+        margin-right: 15px;
+        animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+
+    .popup-warning-text {
+        color: white;
+        font-weight: 700;
+        font-size: 1.1rem;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        letter-spacing: 0.5px;
+    }
+
+    /* Card Schedule Styles */
     .schedule-cards {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -153,162 +398,406 @@
     }
 
     .schedule-card {
-        background: #064e3b !important;
+        background: white;
         border-radius: 16px;
         padding: 24px;
-        border-left: 5px solid #ffd700 !important;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-        transition: 0.3s ease;
-        color: #fefce8;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        border-left: 5px solid #3b82f6;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s ease;
+        transition-delay: calc(var(--index) * 0.1s);
+        position: relative;
+        overflow: hidden;
     }
 
     .schedule-card:hover {
-        transform: translateY(-6px);
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
     }
 
-    /* Disable old color classes */
-    .schedule-card.blue,
-    .schedule-card.purple,
-    .schedule-card.green,
-    .schedule-card.orange,
-    .schedule-card.pink,
-    .schedule-card.teal {
-        border-left: 5px solid #ffd700 !important;
-        background: #064e3b !important;
+    .tab-content.active .schedule-card {
+        opacity: 1;
+        transform: translateY(0);
     }
 
-    /* Card Elements */
+    .schedule-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+        border-radius: 0 0 0 100px;
+    }
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
     .card-day {
-        background: linear-gradient(135deg, #ffd700, #facc15) !important;
-        color: #14532d !important;
+        background: linear-gradient(135deg, #3b82f6, #1e40af);
+        color: white;
         padding: 6px 14px;
         border-radius: 20px;
-        font-weight: 700;
+        font-weight: 600;
+        font-size: 0.9rem;
+        box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
     }
 
-    .card-time,
-    .card-code,
-    .card-info-item .text,
-    .zoom-details {
-        color: #fef9c3 !important;
+    .card-time {
+        display: flex;
+        align-items: center;
+        color: #64748b;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    .card-time::before {
+        content: "🕒";
+        margin-right: 6px;
     }
 
     .card-title {
-        color: #ffffff !important;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #1e293b;
+        margin-bottom: 8px;
+        line-height: 1.3;
+    }
+
+    .card-code {
+        color: #64748b;
+        font-size: 0.85rem;
+        margin-bottom: 16px;
+    }
+
+    .card-info {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .card-info-item {
+        display: flex;
+        align-items: center;
+    }
+
+    .card-info-item .icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #3b82f6;
+    }
+
+    .card-info-item .text {
+        color: #475569;
+        font-size: 0.9rem;
     }
 
     .card-room {
-        background: #14532d;
-        color: #ffd700;
+        background-color: #f1f5f9;
         padding: 6px 12px;
         border-radius: 8px;
+        font-weight: 500;
+        color: #1e293b;
+        display: inline-block;
+        margin-top: 8px;
     }
 
-    /* =======================
-       ZOOM BUTTON
-    ======================= */
+    .card-footer {
+        margin-top: 20px;
+        padding-top: 16px;
+        border-top: 1px solid #e2e8f0;
+    }
+
+    .zoom-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .zoom-details {
+        color: #0369a1;
+        font-size: 0.85rem;
+    }
+
     .zoom-btn {
-        background: #14532d !important;
-        border: 1px solid #ffd700 !important;
-        color: #ffd700 !important;
+        padding: 8px 16px;
+        background: linear-gradient(135deg, #3b82f6, #1e40af);
+        color: white;
+        border: none;
         border-radius: 8px;
-        transition: 0.3s ease;
+        font-size: 0.85rem;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        transition: all 0.2s ease;
+        box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
     }
 
     .zoom-btn:hover {
-        background: #ffd700 !important;
-        color: #14532d !important;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(59, 130, 246, 0.4);
     }
 
-    /* =======================
-       POPUP FINAL FIX (SCROLLABLE)
-    ======================= */
-
-    .popup-overlay {
-        position: fixed;
-        inset: 0;
-        background-color: rgba(0, 0, 0, 0.85);
-        z-index: 9999;
-
-        display: none; /* default hidden */
-        justify-content: center;
-        align-items: flex-start; /* penting agar bisa scroll */
-        
-        overflow-y: auto; /* aktifkan scroll */
-        padding: 60px 20px; /* beri ruang atas bawah */
+    .zoom-icon {
+        height: 20px;
+        margin-right: 6px;
     }
 
-    .popup-overlay.active {
+    /* Tambahkan CSS untuk foto dosen */
+    .lecturer-info-container {
         display: flex;
+        align-items: center;
+        margin-bottom: 16px;
     }
 
-    .popup-content {
-        background: linear-gradient(135deg, #14532d, #052e16);
-        color: #fef9c3;
-        border: 2px solid #ffd700;
-        border-radius: 20px;
-        padding: 40px;
-        width: 100%;
-        max-width: 700px;
-
-        max-height: none; /* jangan dibatasi */
-        overflow: visible;
-
-        box-shadow: 0 0 40px rgba(255, 215, 0, 0.25);
-    }
-
-    .popup-warning {
-        background: linear-gradient(135deg, #92400e, #78350f);
-        border-radius: 12px;
-        padding: 16px;
-        color: #fff;
-    }
-
-    .popup-button {
-        width: 100%;
-        padding: 12px;
-        background: linear-gradient(135deg, #ffd700, #facc15);
-        color: #14532d;
-        font-weight: 700;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-    }
-
-    /* =======================
-       FOOTER
-    ======================= */
-    .page-footer {
-        margin-top: 60px;
-        padding: 20px;
-        text-align: center;
-        background: #052e16;
-        color: #fef08a;
-        border-top: 1px solid #14532d;
-    }
-
-    /* =======================
-       SCROLL BUTTON
-    ======================= */
-    #btnTop {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        background: #ffd700;
-        color: #14532d;
-        border: none;
-        padding: 14px 18px;
+    .lecturer-photo {
+        width: 95px;
+        height: 95px;
         border-radius: 50%;
-        cursor: pointer;
-        display: none;
+        object-fit: cover;
+        border: 3px solid #e2e8f0;
+        margin-right: 8px;
+        flex-shrink: 0;
     }
 
-    /* =======================
-       RESPONSIVE
-    ======================= */
+    .lecturer-details {
+        flex-grow: 1;
+    }
+    .lecturer-email {
+        color: #0369a1;
+        font-size: 0.80rem;
+        display: flex;
+        align-items: center;
+        margin-top: 4px;
+    }
+
+    .lecturer-email .icon {
+        margin-right: 12px;
+        color: #3b82f6;
+    }
+
+    /* Warna gradasi untuk setiap kartu */
+    .schedule-card.blue {
+        border-left: 5px solid #3b82f6;
+    }
+    .schedule-card.blue .card-day {
+        background: linear-gradient(135deg, #3b82f6, #1e40af);
+        box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+    }
+    .schedule-card.blue .card-info-item .icon {
+        color: #3b82f6;
+    }
+    .schedule-card.blue .zoom-btn {
+        background: linear-gradient(135deg, #3b82f6, #1e40af);
+        box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+    }
+    .schedule-card.blue::before {
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+
+    .schedule-card.purple {
+        border-left: 5px solid #8b5cf6;
+    }
+    .schedule-card.purple .card-day {
+        background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+        box-shadow: 0 4px 10px rgba(139, 92, 246, 0.3);
+    }
+    .schedule-card.purple .card-info-item .icon {
+        color: #8b5cf6;
+    }
+    .schedule-card.purple .zoom-btn {
+        background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+        box-shadow: 0 4px 10px rgba(139, 92, 246, 0.3);
+    }
+    .schedule-card.purple::before {
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+
+    .schedule-card.green {
+        border-left: 5px solid #10b981;
+    }
+    .schedule-card.green .card-day {
+        background: linear-gradient(135deg, #10b981, #047857);
+        box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+    }
+    .schedule-card.green .card-info-item .icon {
+        color: #10b981;
+    }
+    .schedule-card.green .zoom-btn {
+        background: linear-gradient(135deg, #10b981, #047857);
+        box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+    }
+    .schedule-card.green::before {
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+
+    .schedule-card.orange {
+        border-left: 5px solid #f97316;
+    }
+    .schedule-card.orange .card-day {
+        background: linear-gradient(135deg, #f97316, #c2410c);
+        box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);
+    }
+    .schedule-card.orange .card-info-item .icon {
+        color: #f97316;
+    }
+    .schedule-card.orange .zoom-btn {
+        background: linear-gradient(135deg, #f97316, #c2410c);
+        box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);
+    }
+    .schedule-card.orange::before {
+        background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+
+    .schedule-card.pink {
+        border-left: 5px solid #ec4899;
+    }
+    .schedule-card.pink .card-day {
+        background: linear-gradient(135deg, #ec4899, #be185d);
+        box-shadow: 0 4px 10px rgba(236, 72, 153, 0.3);
+    }
+    .schedule-card.pink .card-info-item .icon {
+        color: #ec4899;
+    }
+    .schedule-card.pink .zoom-btn {
+        background: linear-gradient(135deg, #ec4899, #be185d);
+        box-shadow: 0 4px 10px rgba(236, 72, 153, 0.3);
+    }
+    .schedule-card.pink::before {
+        background: linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+
+    .schedule-card.teal {
+        border-left: 5px solid #14b8a6;
+    }
+    .schedule-card.teal .card-day {
+        background: linear-gradient(135deg, #14b8a6, #0f766e);
+        box-shadow: 0 4px 10px rgba(20, 184, 166, 0.3);
+    }
+    .schedule-card.teal .card-info-item .icon {
+        color: #14b8a6;
+    }
+    .schedule-card.teal .zoom-btn {
+        background: linear-gradient(135deg, #14b8a6, #0f766e);
+        box-shadow: 0 4px 10px rgba(20, 184, 166, 0.3);
+    }
+    .schedule-card.teal::before {
+        background: linear-gradient(135deg, rgba(20, 184, 166, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+    .welcome-message {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 300px;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .message-content {
+        background: white;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        max-width: 500px;
+    }
+
+    .message-icon {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    .message-content h3 {
+        color: #1e293b;
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+    }
+
+    .message-content p {
+        color: #64748b;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    .popup-header-image {
+        width: 100%;
+        max-width: 310px;
+        height: auto;
+        display: block;
+        margin: 0 auto 15px;
+    }
+
     @media (max-width: 720px) {
+        h2, .judul {
+            font-size: 1.2rem;
+            padding-bottom: 6px;
+        }
+
+        .tab-button {
+            padding: 8px 16px;
+            font-size: 0.85rem;
+        }
+
+        .page-footer {
+            font-size: 0.70rem;
+            padding: 16px;
+        }
+        
+        .popup-content {
+            padding: 25px;
+            width: 95%;
+        }
+        
+        .popup-header h3 {
+            font-size: 1.5rem;
+        }
+        
+        .popup-info h4 {
+            font-size: 1.1rem;
+        }
+        
+        .popup-info li {
+            font-size: 0.9rem;
+        }
+        
         .schedule-cards {
             grid-template-columns: 1fr;
+            margin: 0 12px;
+        }
+        
+        .schedule-card {
+            padding: 18px;
+        }
+        
+        .card-title {
+            font-size: 1rem;
+        }
+        
+        .zoom-info {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .zoom-btn {
+            width: 100%;
+            justify-content: center;
+        }
+        
+        .lecturer-photo {
+            width: 60px;
+            height: 60px;
         }
     }
 </style>
